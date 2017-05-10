@@ -1,0 +1,73 @@
+jQuery(function($) {
+
+	$(function(){
+		$('#main-slider.carousel').carousel({
+			interval: 10000,
+			pause: false
+		});
+	});
+
+	//Ajax contact
+	var form = $('.contact-form');
+	form.submit(function () {
+		$this = $(this);
+		$.post($(this).attr('action'), function(data) {
+			$this.prev().text(data.message).fadeIn().delay(3000).fadeOut();
+		},'json');
+		return false;
+	});
+
+	//scrollspy
+	$('[data-spy="scroll"]').each(function () {
+		var $spy = $(this).scrollspy('refresh')
+	})
+
+	//PrettyPhoto
+	$("a.preview").prettyPhoto({
+		social_tools: false
+	});
+
+	//Isotope
+	$(window).on('load', function(){
+		$portfolio = $('.portfolio-items');
+		$portfolio.isotope({
+			itemSelector : 'li',
+			layoutMode : 'fitRows'
+		});
+
+		$type_selectors = $('.type-filter>li>a');
+		$type_selectors.on('click', function(){
+			$type_selectors.removeClass('active');
+			$(this).addClass('active');
+			var type_selector = $('.type-filter>li>a.active').attr('data-filter');
+			var language_selector = $('.language-filter>li>a.active').attr('data-filter');
+			var area_selector = $('.area-filter>li>a.active').attr('data-filter');
+			console.log(type_selector + language_selector + area_selector);
+			$portfolio.isotope({ filter: type_selector + language_selector + area_selector });
+			return false;
+		});
+
+		$language_selectors = $('.language-filter>li>a');
+		$language_selectors.on('click', function(){
+			$language_selectors.removeClass('active');
+			$(this).addClass('active');
+			var type_selector = $('.type-filter>li>a.active').attr('data-filter');
+			var language_selector = $('.language-filter>li>a.active').attr('data-filter');
+			var area_selector = $('.area-filter>li>a.active').attr('data-filter');
+			console.log(type_selector + language_selector + area_selector);
+			$portfolio.isotope({ filter: type_selector + language_selector + area_selector });
+			return false;
+		});
+
+		$area_selectors = $('.area-filter>li>a');
+		$area_selectors.on('click', function(){
+			$area_selectors.removeClass('active');
+			$(this).addClass('active');
+			var type_selector = $('.type-filter>li>a.active').attr('data-filter');
+			var language_selector = $('.language-filter>li>a.active').attr('data-filter');
+			var area_selector = $('.area-filter>li>a.active').attr('data-filter');
+			$portfolio.isotope({ filter: type_selector + language_selector + area_selector });
+			return false;
+		});
+	});
+});
