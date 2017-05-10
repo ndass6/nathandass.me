@@ -43,11 +43,8 @@ body.ready {
 .letter:not(:first-child) {
   margin-left: -42px;
 }
-.letter-i {
-  z-index: 1;
-  width: 82px;
-  -webkit-transform-origin: 100% 50%;
-          transform-origin: 100% 50%;
+.letter-t {
+  margin-right: -20px;
 }
 .dot {
   position: absolute;
@@ -56,37 +53,7 @@ body.ready {
   -webkit-transform: scale(0);
           transform: scale(0);
 }
-.dot-i {
-  top: 0;
-  left: 240px;
-}
 .dot-e {
   bottom: 0;
   right: 0;
-}
-.logo-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  left: 230px;
-  top: -10px;
-  width: 222px;
-  height: 62px;
-}
-.icon {
-  width: 62px;
-  height: 62px;
-  opacity: 0;
-}
-.icon-text {
-  position: absolute;
-  top: 60px;
-  left: 60px;
-  width: 160px;
-  height: 62px;
-}
-.icon-text path,
-.icon-text polygon {
-  opacity: 0;
 }
