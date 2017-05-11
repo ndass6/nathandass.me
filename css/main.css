@@ -1,17 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
 body {
   background: #e5e5e5;
   color: #999;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+h1, h2, h3, h4, h5, h6 {
   color: #777;
   font-weight: 300;
 }
+
 a {
   color: #52b6ec;
   -webkit-transition: 300ms;
@@ -19,8 +17,62 @@ a {
   -o-transition: 300ms;
   transition: 300ms;
 }
-.space {
-  padding-top: 65px;
+
+/*
+ * Styling for name
+ */
+#name {
+  background-image: url(../images/slider-bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  padding: 250px 0;
+  color: #fff;
+}
+
+.logo-animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: -80px;
+}
+.letters {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 682px;
+  height: 162px;
+}
+.letter {
+  position: relative;
+  width: 162px;
+  height: 162px;
+}
+.letter:not(:first-child) {
+  margin-left: -42px;
+}
+.letter-t {
+  margin-right: -20px;
+}
+.dot {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.dot-e {
+  bottom: 0;
+  right: 0;
 }
 .scrollup {
     width: 40px;
@@ -49,87 +101,7 @@ a:focus {
   text-decoration: none;
   outline: none;
 }
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  z-index: 99999;
-}
-#main-slider {
-  background-image: url(../images/slider-bg.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  padding: 80px 0;
-  color: #fff;
-}
-#main-slider .item {
-  -moz-transition: opacity ease-in-out 500ms;
-  -o-transition: opacity ease-in-out 500ms;
-  -webkit-transition: opacity ease-in-out 500ms;
-  transition: opacity ease-in-out 500ms;
-  left: 0 !important;
-  opacity: 0;
-  top: 0;
-  position: absolute;
-  width: 100%;
-  display: block !important;
-  z-index: 1;
-  text-align: center;
-}
-#main-slider .item:first-child {
-  top: auto;
-  position: relative;
-}
-#main-slider .item.active {
-  opacity: 1;
-  -moz-transition: opacity ease-in-out 500ms;
-  -o-transition: opacity ease-in-out 500ms;
-  -webkit-transition: opacity ease-in-out 500ms;
-  transition: opacity ease-in-out 500ms;
-  z-index: 2;
-}
-#main-slider .item.active h1 {
-  -webkit-animation: scaleUp 400ms;
-  -moz-animation: scaleUp 400ms;
-  -o-animation: scaleUp 400ms;
-  -ms-animation: scaleUp 400ms;
-  animation: scaleUp 400ms;
-}
-#main-slider .prev,
-#main-slider .next {
-  position: absolute;
-  top: 50%;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  display: inline-block;
-  margin-top: -50px;
-  font-size: 24px;
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
-  text-align: center;
-  border-radius: 4px;
-  z-index: 5;
-}
-#main-slider .prev:hover,
-#main-slider .next:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-#main-slider .prev {
-  left: 10px;
-}
-#main-slider .next {
-  right: 10px;
-}
-#main-slider h1 {
-  font-size: 68px;
-  text-shadow: 0 3px rgba(0, 0, 0, 0.1);
-  color: #fff;
-}
+
 .carousel-inner .item img {
   display: block;
   margin: 0 auto;
