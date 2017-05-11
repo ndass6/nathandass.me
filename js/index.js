@@ -1,5 +1,5 @@
-var logoEl = document.querySelector('.logo-animation');
-var pathEls = document.querySelectorAll('.logo-animation path:not(.icon-curve)');
+var logoEl = document.querySelector('.name-animation');
+var pathEls = document.querySelectorAll('.name-animation path:not(.icon-curve)');
 var innerWidth = window.innerWidth;
 var maxWidth = 740;
 var logoScale = innerWidth <= maxWidth ? innerWidth / maxWidth : 1;
