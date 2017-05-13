@@ -27,9 +27,6 @@ a:focus {
   text-decoration: none;
   outline: none;
 }
-.space {
-  padding-top: 65px;
-}
 .box {
   padding: 50px 30px;
   background: #fff;
@@ -124,13 +121,56 @@ a:focus {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  padding: 80px 0;
+  padding: 150px 0;
 }
 #name h1 {
   font-size: 68px;
   text-shadow: 0 3px rgba(0, 0, 0, 0.1);
   color: #fff;
   text-align: center;
+}
+.name-animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: -40px;
+}
+.letters {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 682px;
+  height: 162px;
+}
+.letter {
+  position: relative;
+  width: 162px;
+  height: 162px;
+}
+.letter:not(:first-child) {
+  margin-left: -42px;
+}
+.letter-t {
+  margin-right: -20px;
+}
+.dot {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.dot-e {
+  bottom: 0;
+  right: 0;
 }
 
 /************
