@@ -1,0 +1,53 @@
+body {
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body.ready {
+  opacity: 1;
+}
+.logo-animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: -40px;
+}
+.letters {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.letter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.dot {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.dot-e {
+  bottom: 0;
+  right: 0;
+}
