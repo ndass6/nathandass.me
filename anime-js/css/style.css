@@ -10,6 +10,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: black;
 }
 body.ready {
   opacity: 1;
@@ -32,7 +33,7 @@ body.ready {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 682px;
+  width: 1082px;
   height: 162px;
 }
 .letter {
@@ -43,8 +44,17 @@ body.ready {
 .letter:not(:first-child) {
   margin-left: -42px;
 }
-.letter-t {
-  margin-right: -20px;
+.letter-t1 {
+  margin-right: -2%;
+}
+.letter-n2 {
+  margin-right: 4%;
+}
+.letter-a3 {
+  margin-right: -1%;
+}
+.letter-s1 {
+  margin-right: -4%;
 }
 .dot {
   position: absolute;
