@@ -284,10 +284,9 @@ a:focus {
 }
 .project-items li {
   display: inline-block;
-  width: 25%;
+  width: 24%;
   margin: 0;
   padding: 20px;
-  text-align: left;
   position: relative;
 }
 .project-items figure {
@@ -317,7 +316,7 @@ a:focus {
   left: 0;
   text-align: center;
   margin: 0 auto;
-  word-spacing: 30px;
+  word-spacing: 20px;
 }
 .project-items figcaption h5 a {
   text-align: center;
@@ -328,7 +327,10 @@ a:focus {
 }
 .no-touch figure:hover img,
 figure.cs-hover img {
-  transform: translateY(-19px) scale(0.75);
+  transform: translateY(-18.5px) scale(0.75);
+}
+.project-items li h3 {
+  text-align: center;
 }
 /* Start: Recommended Isotope styles */
 /**** Isotope Filtering ****/
