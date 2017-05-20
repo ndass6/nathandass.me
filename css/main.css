@@ -50,6 +50,7 @@ a:focus {
 }
 .center {
   text-align: center;
+  align-items: center;
 }
 .gap {
   margin-bottom: 50px;
@@ -262,86 +263,74 @@ a:focus {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.portfolio-items,
-.portfolio-filter {
+.project-filter {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.portfolio-items {
-  margin-right: -20px;
-}
-.portfolio-filter {
+.project-filter {
   margin-bottom: 10px;
   text-align: center;
 }
-.portfolio-filter > li {
+.project-filter li {
   display: inline-block;
 }
-.portfolio-items > li {
-  float: left;
-  padding: 0;
-  margin: 0;
-  padding-bottom: 10px;
-  height: 250px;
-}
-.portfolio-items.col-2 > li {
-  width: 50%;
-}
-.portfolio-items.col-3 > li {
-  width: 33%;
-}
-.portfolio-items.col-4 > li {
-  width: 25%;
-}
-.portfolio-items.col-5 > li {
-  width: 20%;
-}
-.portfolio-items.col-6 > li {
-  width: 16%;
-}
-.portfolio-item .item-inner {
-  margin: 0 20px 20px 0;
+.project-items {
+  padding: 20px 20px 100px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  list-style: none;
   text-align: center;
-  background: #fff;
-  padding: 10px;
 }
-.portfolio-item img {
-  width: 100%;
-}
-.portfolio-item .portfolio-image {
+.project-items li {
+  display: inline-block;
+  width: 24%;
+  margin: 0;
+  padding: 20px;
   position: relative;
 }
-.portfolio-item h5 {
+.project-items figure {
   margin: 0;
-  padding: 10px 0 0 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  position: relative;
 }
-.portfolio-item .overlay {
+.project-items figure img {
+  max-width: 100%;
+  display: block;
+  position: relative;
+  z-index: 10;
+  transition: transform 0.4s;
+}
+.project-items figcaption {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  background: #2c3f52;
+  color: #ed4e6e;
   height: 100%;
-  opacity: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+}
+.project-items figcaption h5 {
+  position: absolute;
+  bottom: 12px;
+  right: 0;
+  left: 0;
   text-align: center;
-  vertical-align: middle;
-  -webkit-transition: opacity 300ms;
-  -moz-transition: opacity 300ms;
-  -o-transition: opacity 300ms;
-  transition: opacity 300ms;
+  margin: 0 auto;
+  word-spacing: 20px;
 }
-.portfolio-item .overlay .preview {
-  position: relative;
-  top: 50%;
-  display: inline-block;
-  margin-top: -20px;
+.project-items figcaption h5 a {
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 2px;
+  background: #ed4e6e;
+  color: #fff;
 }
-.portfolio-item:hover .overlay {
-  opacity: 1;
+.no-touch figure:hover img,
+figure.cs-hover img {
+  transform: translateY(-18.5px) scale(0.75);
+}
+.project-items li h3 {
+  text-align: center;
 }
 /* Start: Recommended Isotope styles */
 /**** Isotope Filtering ****/
