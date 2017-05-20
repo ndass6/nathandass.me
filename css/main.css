@@ -50,6 +50,7 @@ a:focus {
 }
 .center {
   text-align: center;
+  align-items: center;
 }
 .gap {
   margin-bottom: 50px;
@@ -283,7 +284,7 @@ a:focus {
 }
 .project-items li {
   display: inline-block;
-  width: 440px;
+  width: 25%;
   margin: 0;
   padding: 20px;
   text-align: left;
@@ -297,77 +298,38 @@ a:focus {
   max-width: 100%;
   display: block;
   position: relative;
+  z-index: 10;
+  transition: transform 0.4s;
 }
 .project-items figcaption {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 20px;
   background: #2c3f52;
   color: #ed4e6e;
-}
-.project-items figcaption h5 {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-.project-items figcaption h5 a {
-  text-align: center;
-  padding: 5px 10px;
-  border-radius: 2px;
-  display: inline-block;
-  background: #ed4e6e;
-  color: #fff;
-}
-.cs-style-6 figure img {
-  z-index: 10;
-  transition: transform 0.4s;
-}
-.no-touch .cs-style-6 figure:hover img,
-.cs-style-6 figure.cs-hover img {
-  transform: translateY(-50px) scale(0.5);
-}
-.cs-style-6 figcaption {
   height: 100%;
   width: 100%;
 }
-.cs-style-6 figcaption h3 {
-  margin-top: 60%;
-}
-.project-items.col-2 > li {
-  width: 50%;
-}
-.project-items.col-3 > li {
-  width: 33%;
-}
-.project-items.col-4 > li {
-  width: 25%;
-}
-.project-items.col-5 > li {
-  width: 20%;
-}
-.project-items.col-6 > li {
-  width: 16%;
-}
-/*.project-item .item-inner {
-  margin: 0 20px 20px 0;
+.project-items figcaption h5 {
+  position: absolute;
+  bottom: 12px;
+  right: 0;
+  left: 0;
   text-align: center;
-  background: #fff;
-  padding: 10px;
+  margin: 0 auto;
+  word-spacing: 30px;
 }
-.project-item img {
-  width: 100%;
+.project-items figcaption h5 a {
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 2px;
+  background: #ed4e6e;
+  color: #fff;
 }
-.project-item .project-image {
-  position: relative;
+.no-touch figure:hover img,
+figure.cs-hover img {
+  transform: translateY(-19px) scale(0.75);
 }
-.project-item h5 {
-  margin: 0;
-  padding: 10px 0 0 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}*/
 /* Start: Recommended Isotope styles */
 /**** Isotope Filtering ****/
 .isotope-item {
