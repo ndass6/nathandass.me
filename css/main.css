@@ -262,64 +262,64 @@ a:focus {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.portfolio-items,
-.portfolio-filter {
+.project-items,
+.project-filter {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.portfolio-items {
+.project-items {
   margin-right: -20px;
 }
-.portfolio-filter {
+.project-filter {
   margin-bottom: 10px;
   text-align: center;
 }
-.portfolio-filter > li {
+.project-filter > li {
   display: inline-block;
 }
-.portfolio-items > li {
+.project-items > li {
   float: left;
   padding: 0;
   margin: 0;
   padding-bottom: 10px;
   height: 250px;
 }
-.portfolio-items.col-2 > li {
+.project-items.col-2 > li {
   width: 50%;
 }
-.portfolio-items.col-3 > li {
+.project-items.col-3 > li {
   width: 33%;
 }
-.portfolio-items.col-4 > li {
+.project-items.col-4 > li {
   width: 25%;
 }
-.portfolio-items.col-5 > li {
+.project-items.col-5 > li {
   width: 20%;
 }
-.portfolio-items.col-6 > li {
+.project-items.col-6 > li {
   width: 16%;
 }
-.portfolio-item .item-inner {
+.project-item .item-inner {
   margin: 0 20px 20px 0;
   text-align: center;
   background: #fff;
   padding: 10px;
 }
-.portfolio-item img {
+.project-item img {
   width: 100%;
 }
-.portfolio-item .portfolio-image {
+.project-item .project-image {
   position: relative;
 }
-.portfolio-item h5 {
+.project-item h5 {
   margin: 0;
   padding: 10px 0 0 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.portfolio-item .overlay {
+.project-item .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -334,13 +334,13 @@ a:focus {
   -o-transition: opacity 300ms;
   transition: opacity 300ms;
 }
-.portfolio-item .overlay .preview {
+.project-item .overlay .preview {
   position: relative;
   top: 50%;
   display: inline-block;
   margin-top: -20px;
 }
-.portfolio-item:hover .overlay {
+.project-item:hover .overlay {
   opacity: 1;
 }
 /* Start: Recommended Isotope styles */

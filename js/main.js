@@ -29,8 +29,8 @@ jQuery(function($) {
 
 	//Isotope
 	$(window).on('load', function(){
-		$portfolio = $('.portfolio-items');
-		$portfolio.isotope({
+		$project = $('.project-items');
+		$project.isotope({
 			itemSelector : 'li',
 			layoutMode : 'fitRows'
 		});
@@ -43,7 +43,7 @@ jQuery(function($) {
 			var language_selector = $('.language-filter>li>a.active').attr('data-filter');
 			var area_selector = $('.area-filter>li>a.active').attr('data-filter');
 			console.log(type_selector + language_selector + area_selector);
-			$portfolio.isotope({ filter: type_selector + language_selector + area_selector });
+			$project.isotope({ filter: type_selector + language_selector + area_selector });
 			return false;
 		});
 
@@ -55,7 +55,7 @@ jQuery(function($) {
 			var language_selector = $('.language-filter>li>a.active').attr('data-filter');
 			var area_selector = $('.area-filter>li>a.active').attr('data-filter');
 			console.log(type_selector + language_selector + area_selector);
-			$portfolio.isotope({ filter: type_selector + language_selector + area_selector });
+			$project.isotope({ filter: type_selector + language_selector + area_selector });
 			return false;
 		});
 
@@ -66,7 +66,7 @@ jQuery(function($) {
 			var type_selector = $('.type-filter>li>a.active').attr('data-filter');
 			var language_selector = $('.language-filter>li>a.active').attr('data-filter');
 			var area_selector = $('.area-filter>li>a.active').attr('data-filter');
-			$portfolio.isotope({ filter: type_selector + language_selector + area_selector });
+			$project.isotope({ filter: type_selector + language_selector + area_selector });
 			return false;
 		});
 	});
