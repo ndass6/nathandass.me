@@ -262,28 +262,77 @@ a:focus {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.project-items,
 .project-filter {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.project-items {
-  margin-right: -20px;
-}
 .project-filter {
   margin-bottom: 10px;
   text-align: center;
 }
-.project-filter > li {
+.project-filter li {
   display: inline-block;
 }
-.project-items > li {
-  float: left;
-  padding: 0;
+.project-items {
+  padding: 20px 20px 100px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+.project-items li {
+  display: inline-block;
+  width: 440px;
   margin: 0;
-  padding-bottom: 10px;
-  height: 250px;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+}
+.project-items figure {
+  margin: 0;
+  position: relative;
+}
+.project-items figure img {
+  max-width: 100%;
+  display: block;
+  position: relative;
+}
+.project-items figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background: #2c3f52;
+  color: #ed4e6e;
+}
+.project-items figcaption h5 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.project-items figcaption h5 a {
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 2px;
+  display: inline-block;
+  background: #ed4e6e;
+  color: #fff;
+}
+.cs-style-6 figure img {
+  z-index: 10;
+  transition: transform 0.4s;
+}
+.no-touch .cs-style-6 figure:hover img,
+.cs-style-6 figure.cs-hover img {
+  transform: translateY(-50px) scale(0.5);
+}
+.cs-style-6 figcaption {
+  height: 100%;
+  width: 100%;
+}
+.cs-style-6 figcaption h3 {
+  margin-top: 60%;
 }
 .project-items.col-2 > li {
   width: 50%;
@@ -300,7 +349,7 @@ a:focus {
 .project-items.col-6 > li {
   width: 16%;
 }
-.project-item .item-inner {
+/*.project-item .item-inner {
   margin: 0 20px 20px 0;
   text-align: center;
   background: #fff;
@@ -318,31 +367,7 @@ a:focus {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-}
-.project-item .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  text-align: center;
-  vertical-align: middle;
-  -webkit-transition: opacity 300ms;
-  -moz-transition: opacity 300ms;
-  -o-transition: opacity 300ms;
-  transition: opacity 300ms;
-}
-.project-item .overlay .preview {
-  position: relative;
-  top: 50%;
-  display: inline-block;
-  margin-top: -20px;
-}
-.project-item:hover .overlay {
-  opacity: 1;
-}
+}*/
 /* Start: Recommended Isotope styles */
 /**** Isotope Filtering ****/
 .isotope-item {
