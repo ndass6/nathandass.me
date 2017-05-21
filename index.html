@@ -11,14 +11,13 @@
   <link href="css/animate.min.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
   <link href="css/prettyPhoto.css" rel="stylesheet">
-</head><!--/head-->
+</head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
-      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
           <li class="active"><a class="page-scroll" href="#main-slider"><i class="fa fa-home"></i></a></li>
@@ -32,10 +31,18 @@
           <li><a class="page-scroll" href="#volunteer">Volunteering</a></li>
         </ul>
       </div>
-      <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
-  </nav>
+  </nav> -->
+  <nav class="cd-vertical-nav">
+    <ul class="cd-vertical-nav-ul">
+      <li><a href="#page-top" class="active page-scroll"><span class="label">Top</span></a></li>
+      <li><a href="#about" class="page-scroll"><span class="label">About Me</span></a></li>
+      <li><a href="#work" class="page-scroll"><span class="label">Work Experience</span></a></li>
+      <li><a href="#research" class="page-scroll"><span class="label">Research</span></a></li>
+    </ul>
+  </nav><!-- .cd-vertical-nav -->
+ 
+<button class="cd-nav-trigger cd-image-replace">Open navigation<span aria-hidden="true"></span></button>
 
   <section id="name" class>
     <div class="container space">
@@ -997,16 +1004,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="js/jquery.isotope.min.js"></script>
-  <script src="js/jquery.prettyPhoto.js"></script>
   <script src='js/ymlarg.js'></script>
   <script src="js/name-animation.js"></script>
   <script src="js/main.js"></script>
   <script src="js/jquery.easing.min.js"></script>
-  <script src="js/scrolling-nav.js"></script>
+  <!-- <script src="js/scroll.js"></script> -->
   <script src="js/core.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/captions.js"></script>
-  <script src="js/modernizr.custom.js"></script>
+  <script src="js/modernizr.js"></script>
+  <!-- <script src="js/modernizr.custom.js"></script> -->
+  <script src="js/navbar.js"></script>
   <script>new WOW().init();</script>
 </body>
 </html>
