@@ -163,12 +163,12 @@ a:focus {
 .cd-vertical-nav a {
   display: block;
   padding: 1em;
-  color: var(--active-color);
+  color: var(--background-color);
   font-weight: bold;
   border-bottom: 1px solid rgba(58, 44, 65, 0.1);
 }
 .cd-vertical-nav a.active {
-  color: var(--active-color);
+  color: var(--background-color);
 }
 .cd-vertical-nav.open {
   -webkit-transform: scale(1);
@@ -263,10 +263,10 @@ a:focus {
     margin: 1.4em auto;
     border-bottom: none;
     font-size: 1.2rem;
-    color: var(--normal-color);
+    color: var(--background-color);
   }
   .cd-vertical-nav a.active {
-    color: var(--active-color);
+    color: var(--background-color);
   }
   .cd-vertical-nav a::before, .cd-vertical-nav a::after {
     /* used to create the filled circle and the background icon */
@@ -299,11 +299,12 @@ a:focus {
     transition: transform 0.4s, background-color 0.2s;
   }
   .cd-vertical-nav a::after {
-    /* icon */
     opacity: 0;
     top: 8px;
     height: 16px;
     width: 16px;
+    font-family: FontAwesome;
+    display: inline-block;
     -webkit-transform: translateX(-50%) scale(0);
     -moz-transform: translateX(-50%) scale(0);
     -ms-transform: translateX(-50%) scale(0);
@@ -312,6 +313,38 @@ a:focus {
     -webkit-transition: -webkit-transform 0.4s 0s, opacity 0.1s 0.3s;
     -moz-transition: -moz-transform 0.4s 0s, opacity 0.1s 0.3s;
     transition: transform 0.4s 0s, opacity 0.1s 0.3s;
+  }
+  /*Icons*/
+  /*http://fontawesome.io/cheatsheet/*/
+  .cd-vertical-nav a.top-icon::after {
+    content: "\f015";
+  }
+  .cd-vertical-nav a.about-icon::after {
+    content: "\f007";
+  }
+  .cd-vertical-nav a.work-icon::after {
+    content: "\f1ad";
+  }
+  .cd-vertical-nav a.research-icon::after {
+    content: "\f0c3";
+  }
+  .cd-vertical-nav a.education-icon::after {
+    content: "\f19d";
+  }
+  .cd-vertical-nav a.projects-icon::after {
+    content: "\f109";
+  }
+  .cd-vertical-nav a.awards-icon::after {
+    content: "\f091";
+  }
+  .cd-vertical-nav a.activities-icon::after {
+    content: "\f0c0";
+  }
+  .cd-vertical-nav a.volunteer-icon::after {
+    content: "\f2b5";
+  }
+  .cd-vertical-nav a.contact-icon::after {
+    content: "\f086";
   }
   .cd-vertical-nav a.active::before, .no-touch .cd-vertical-nav a:hover::before {
     background-color: var(--active-color);
