@@ -22,11 +22,6 @@ jQuery(function($) {
 		var $spy = $(this).scrollspy('refresh')
 	})
 
-	//PrettyPhoto
-	$("a.preview").prettyPhoto({
-		social_tools: false
-	});
-
 	//Isotope
 	$(window).on('load', function(){
 		$project = $('.project-items');
