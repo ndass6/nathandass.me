@@ -348,6 +348,12 @@ a:focus {
   }
   .cd-vertical-nav a.active::before, .no-touch .cd-vertical-nav a:hover::before {
     background-color: var(--active-color);
+    transition-duration: 0.5s;
+    -webkit-transform: translateX(-50%) scale(0.5);
+    -moz-transform: translateX(-50%) scale(0.5);
+    -ms-transform: translateX(-50%) scale(0.5);
+    -o-transform: translateX(-50%) scale(0.5);
+    transform: translateX(-50%) scale(0.5);
   }
   .cd-vertical-nav .label {
     display: block;
@@ -841,16 +847,7 @@ ul.contact > li > a i {
 .grow {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
-  -webkit-transition-property: box-shadow, transform;
-  transition-property: box-shadow, transform;
 }
 .grow:hover {
   -webkit-transform: scale(1.05);
