@@ -534,13 +534,48 @@ no-js
 /************
  * About Me *
  ************/
-.carousel-inner .item img {
-  display: block;
-  margin: 0 auto;
-  max-height: 475px;
-  min-width: auto;
-  border-radius: 50px;
+.carousel {
+  max-height: 450px;
+  /*max-width: auto;*/
+  margin-bottom: 15px;
+
 }
+.carousel-picture {
+  text-align: center;
+  align-content: center;
+  align-self: center;
+}
+.carousel-picture img {
+  border-radius: 50px;
+  max-height: 450px;
+  margin: 0 auto;
+}
+.carousel-caption {
+  background-color: rgba(0,0,0,.675);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  height: 100px;
+  padding: 25px 25px 25px 25px;
+  color: #fff;
+  text-align: left;
+}
+.carousel-nav {
+  width: 60%;
+  margin: 0 auto;
+}
+.carousel-nav-pic {
+  line-height: 200px;
+}
+.carousel-nav img {
+  width: 150px;
+  height: auto;
+  vertical-align: middle;
+  display: inline;
+}
+/*
 .carousel-caption {
   background-color: rgba(0,0,0,.675);
   position: absolute;
@@ -571,7 +606,7 @@ no-js
 .glyphicon.glyphicon-chevron-left,
 .glyphicon.glyphicon-chevron-right {
   color: rgba(0,0,0,0.675);
-}
+}*/
 
 /************
  * About Me *
