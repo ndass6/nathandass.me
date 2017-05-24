@@ -534,12 +534,21 @@ no-js
 /************
  * About Me *
  ************/
-.carousel-inner .item img {
-  display: block;
-  margin: 0 auto;
-  max-height: 475px;
-  min-width: auto;
+.carousel {
+  max-height: 450px;
+  /*max-width: auto;*/
+  margin-bottom: 15px;
+
+}
+.carousel-picture {
+  text-align: center;
+  align-content: center;
+  align-self: center;
+}
+.carousel-picture img {
   border-radius: 50px;
+  max-height: 450px;
+  margin: 0 auto;
 }
 .carousel-caption {
   background-color: rgba(0,0,0,.675);
@@ -553,24 +562,18 @@ no-js
   color: #fff;
   text-align: left;
 }
-.carousel-indicators {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  z-index: 15;
-  margin: 0;
-  padding: 0 25px 25px 0;
-  text-align: right;
+.carousel-nav {
+  width: 60%;
+  margin: 0 auto;
 }
-.carousel-control.left,
-.carousel-control.right {
-  background-image: none;
+.carousel-nav-pic {
+  line-height: 200px;
 }
-.glyphicon.glyphicon-chevron-left,
-.glyphicon.glyphicon-chevron-right {
-  color: rgba(0,0,0,0.675);
+.carousel-nav img {
+  width: 150px;
+  height: auto;
+  vertical-align: middle;
+  display: inline;
 }
 
 /************

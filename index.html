@@ -10,9 +10,12 @@
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/slick.css" rel="stylesheet">
   <link href="css/animate.min.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
-  <link href="css/prettyPhoto.css" rel="stylesheet">
+  <link href="css/slick.css" rel="stylesheet">
+  <link href="css/slick-theme.css" rel="stylesheet">
+  <!-- <link href="css/prettyPhoto.css" rel="stylesheet"> -->
 </head>
 
 <body id="page-top">
@@ -145,47 +148,76 @@
   <section id="about" class="cd-section">
     <div class="container">
       <div class="box first">
-        <div class="gap"></div>
         <div class="center">
           <h2>About Me</h2>
-          <div class="container" style="width:100%">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="8000">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-              </ol>
-
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-                <div class="item active">
+          <div class="container">
+            <div class="carousel slick">
+              <div>
+                <div class="carousel-picture">
                   <img src="images/about.jpg">
-                  <div class="carousel-caption">
-                    <p>Senior at Georgia Institute of Technology majoring in Computer Science and specializing in Intelligence and People. My goal is to integrate artificial intelligence and human-computer interaction into our everyday lives.</p>
-                  </div>
                 </div>
-                <div class="item">
-                  <img src="images/inventure.jpg">
-                  <div class="carousel-caption">
-                    <p>Won 2nd place at Georgia Tech's InVenture Prize for <a href="http://www.internblitz.com">InternBlitz</a>. Pictured with Georgia Tech President Dr. Bud Peterson, his wife Val Peterson, and co-founder Murtaza Bambot.</p>
-                  </div>
-                </div>
-                <div class="item">
-                  <img src="images/nasdaq.jpg">
-                  <div class="carousel-caption">
-                    <p>Was invited to watch the closing bell ceremony as part of winning the NASDAQ API prize at HackMIT.</p>
-                  </div>
+                <div class="carousel-caption">
+                  <p>Senior at Georgia Institute of Technology majoring in Computer Science and specializing in Intelligence and People. My goal is to integrate artificial intelligence and human-computer interaction into our everyday lives.</p>
                 </div>
               </div>
+              <div>
+                <div class="carousel-picture">
+                  <img src="images/inventure.jpg">
+                </div>
+                <div class="carousel-caption">
+                  <p>Won 2nd place at Georgia Tech's InVenture Prize for <a href="http://www.internblitz.com">InternBlitz</a>. Pictured with Georgia Tech President Dr. Bud Peterson, his wife Val Peterson, and co-founder Murtaza Bambot.</p>
+                </div>
+              </div>
+              <div>
+                <div class="carousel-picture">
+                  <img src="images/nasdaq.jpg">
+                </div>
+                <div class="carousel-caption">
+                  <p>Was invited to watch the closing bell ceremony as part of winning the NASDAQ API prize at HackMIT.</p>
+                </div>
+              </div>
+              <div>
+                <img src="http://placehold.it/350x350?text=4">
+                <!-- <img src="images/nasdaq.jpg"> -->
+                <!-- <div class="carousel-caption">
+                  <p>Was invited to watch the closing bell ceremony as part of winning the NASDAQ API prize at HackMIT.</p>
+                </div> -->
+              </div>
+              <div>
+                <img src="http://placehold.it/350x350?text=5">
+                <!-- <img src="images/nasdaq.jpg"> -->
+                <!-- <div class="carousel-caption">
+                  <p>Was invited to watch the closing bell ceremony as part of winning the NASDAQ API prize at HackMIT.</p>
+                </div> -->
+              </div>
+              <div>
+                <img src="http://placehold.it/350x350?text=6">
+                <!-- <img src="images/nasdaq.jpg"> -->
+                <!-- <div class="carousel-caption">
+                  <p>Was invited to watch the closing bell ceremony as part of winning the NASDAQ API prize at HackMIT.</p>
+                </div> -->
+              </div>
+            </div>
 
-              <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              </a>
-              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              </a>
+            <div class="carousel-nav slick">
+              <div class="carousel-nav-pic">
+                <img src="images/about.jpg">
+              </div>
+              <div class="carousel-nav-pic">
+                <img src="images/inventure.jpg">
+              </div>
+              <div class="carousel-nav-pic">
+                <img src="images/nasdaq.jpg">
+              </div>
+              <div class="carousel-nav-pic">
+                <img src="http://placehold.it/100x100?text=4">
+              </div>
+              <div class="carousel-nav-pic">
+                <img src="http://placehold.it/100x100?text=5">
+              </div>
+              <div class="carousel-nav-pic">
+                <img src="http://placehold.it/100x100?text=6">
+              </div>
             </div>
           </div>
         </div><!--/.center-->
@@ -1019,12 +1051,12 @@
   <script src="js/main.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/jquery.easing.min.js"></script>
-  <!-- <script src="js/scroll.js"></script> -->
   <script src="js/core.js"></script>
-  <script src="js/wow.min.js"></script>
   <script src="js/captions.js"></script>
-  <!-- <script src="js/modernizr.js"></script> -->
   <script src="js/modernizr.custom.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/wow.min.js"></script>
   <script>new WOW().init();</script>
 </body>
 </html>
