@@ -3,7 +3,6 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    // centerPadding: 25,
     arrows: true,
     fade: true,
     asNavFor: '.carousel-nav'
