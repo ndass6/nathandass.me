@@ -6,10 +6,6 @@
 /***********
  * General *
  ***********/
-body {
-  background: #e5e5e5;
-  color: #999;
-}
 h1, h2, h3, h4, h5, h6 {
   color: #777;
   font-weight: 300;
@@ -28,17 +24,7 @@ a:focus {
   outline: none;
 }
 .box {
-  padding: 50px 30px;
-  background: #fff;
-  border-bottom: 1px solid #e9e9e9;
   position: relative;
-}
-.box.first {
-  margin-top: -40px;
-  border-radius: 5px 5px 0 0;
-}
-.box.last {
-  border-radius: 0 0 5px 5px;
 }
 .box h2 {
   padding: 10px 30px;
@@ -537,6 +523,41 @@ no-js
   right: 0;
 }
 
+/********************
+ * Section Dividers *
+ ********************/
+ :root {
+  --color1: #ffffff;
+  --color2: #f3f3f3;
+  --color3: #e5e5e5;
+}
+#sectionDivider1 {
+  background-color: var(--color2);
+  display: block;
+}
+#sectionDivider1 #trianglePath1 {
+  fill: var(--color1);
+  stroke: var(--color1);
+}
+
+#sectionDivider1 #trianglePath2 {
+  fill: var(--color3);
+  stroke: var(--color3);
+}
+#sectionDivider2 {
+  background-color: var(--color1);
+  display: block;
+}
+#sectionDivider2 #trianglePath1 {
+  fill: var(--color2);
+  stroke: var(--color2);
+}
+
+#sectionDivider2 #trianglePath2 {
+  fill: var(--color3);
+  stroke: var(--color3);
+}
+
 /************
  * About Me *
  ************/
@@ -582,26 +603,23 @@ no-js
   display: inline;
 }
 
-/************
- * About Me *
- ************/
-#about .box {
+section#about {
   background: #ffffff;
 }
-#work .box {
+section#work {
   background: #f3f3f3;
 }
-#research .box {
+section#research {
   background: #ffffff;
 }
-#education .box {
+section#education {
   background: #f3f3f3;
 }
 
 /************
  * Projects *
  ************/
-#projects .box {
+section#projects {
   background: #ffffff;
 }
 .btn {
@@ -742,28 +760,29 @@ figure.cs-hover img {
 /**********
  * Awards *
  **********/
-#awards .box {
+section#awards {
   background: #f3f3f3;
 }
 
 /**************
  * Activities *
  **************/
-#activities .box {
+section#activities {
   background: #ffffff;
 }
 
 /****************
  * Volunteering *
  ****************/
-#volunteer .box {
+section#volunteer {
   background: #f3f3f3;
 }
 
 /**************
  * Contact Me *
  **************/
-#contact .box {
+section#contact {
+  padding-top: 20px;
   background-color: #222;
   color: #999;
 }
@@ -818,11 +837,6 @@ ul.contact > li > a i {
 /**********
  * Footer *
  **********/
-#footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  color: #e5e5e5;
-}
 #footer a {
   color: #e5e5e5;
 }
