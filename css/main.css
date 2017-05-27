@@ -3,15 +3,49 @@
  ***********/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
+/*****************
+ * Color Schemes *
+ *****************/
+:root {
+  --main-color1: #ffffff;
+  --main-color2: #f3f3f3;
+  --accent-color1: #e5e5e5;
+
+  --font-normal-color: #777;
+
+  --a-normal-color: #52b6ec;
+  --a-hover-color: #80c9f1;
+
+  --nav-normal-color: #8c8c8c;
+  --nav-hover-color: #c0a672;
+  --nav-active-color: #c0a672;
+  --nav-background-color: #3a2c41;
+
+  --carousel-background-color: rgba(0,0,0,.675);
+  --carousel-text-color: #ffffff;
+
+  --project-button-normal-color: #52b6ec;
+  --project-button-hover-color: #1586c3;
+  --project-button-active-color: #1586c3;
+
+  --project-item-background-color: #2c3f52;
+  --project-item-button-background-color: #ed4e6e;
+  --project-item-button-font-color: #ffffff;
+
+  --contact-background-color: #222222;
+  --contact-font-color: #ffffff;
+  --contact-hover-color: #52b6ec;
+}
+
 /***********
  * General *
  ***********/
 h1, h2, h3, h4, h5, h6 {
-  color: #777;
+  color: var(--font-normal-color);
   font-weight: 300;
 }
 a {
-  color: #52b6ec;
+  color: var(--a-normal-color);
   -webkit-transition: 300ms;
   -moz-transition: 300ms;
   -o-transition: 300ms;
@@ -19,7 +53,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #80c9f1;
+  color: var(--a-hover-color);
   text-decoration: none;
   outline: none;
 }
@@ -48,12 +82,6 @@ a:focus {
 /**********
  * Navbar *
  **********/
-:root {
-  --active-color: #c0a672;
-  --hover-color: #c0a672;
-  --normal-color: #8c8c8c;
-  --background-color: #3a2c41;
-}
 .cd-vertical-nav, .cd-vertical-nav-ul {
   margin: 0;
   padding: 0;
@@ -72,7 +100,7 @@ a:focus {
   height: 44px;
   width: 44px;
   border-radius: 0.25em;
-  background: var(--background-color);
+  background: var(--nav-background-color);
   /* reset button style */
   cursor: pointer;
   -webkit-appearance: none;
@@ -88,7 +116,7 @@ a:focus {
   position: absolute;
   height: 4px;
   width: 4px;
-  background-color: var(--background-color);
+  background-color: var(--nav-background-color);
   border-radius: 50%;
   left: 50%;
   top: 50%;
@@ -107,7 +135,7 @@ a:focus {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: var(--background-color);
+  background-color: var(--nav-background-color);
   border-radius: inherit;
 }
 .cd-nav-trigger span::before {
@@ -149,12 +177,12 @@ a:focus {
 .cd-vertical-nav a {
   display: block;
   padding: 1em;
-  color: var(--background-color);
+  color: var(--nav-background-color);
   font-weight: bold;
   border-bottom: 1px solid rgba(58, 44, 65, 0.1);
 }
 .cd-vertical-nav a.active {
-  color: var(--background-color);
+  color: var(--nav-background-color);
 }
 .cd-vertical-nav.open {
   -webkit-transform: scale(1);
@@ -168,7 +196,7 @@ a:focus {
   background-color: transparent;
 }
 .cd-vertical-nav.open + .cd-nav-trigger span {
-  background-color: var(--background-color);
+  background-color: var(--nav-background-color);
 }
 .cd-vertical-nav.open + .cd-nav-trigger span::before, .cd-vertical-nav.open + .cd-nav-trigger span::after {
   /* transform dots in 'X' icon */
@@ -220,7 +248,7 @@ a:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--background-color);
+    background: var(--nav-background-color);
     -webkit-transform: translateX(100%);
     -moz-transform: translateX(100%);
     -ms-transform: translateX(100%);
@@ -249,10 +277,10 @@ a:focus {
     margin: 1.4em auto;
     border-bottom: none;
     font-size: 1.2rem;
-    color: var(--background-color);
+    color: var(--nav-background-color);
   }
   .cd-vertical-nav a.active {
-    color: var(--background-color);
+    color: var(--nav-background-color);
   }
   .cd-vertical-nav a::before, .cd-vertical-nav a::after {
     /* used to create the filled circle and the background icon */
@@ -274,7 +302,7 @@ a:focus {
     height: 32px;
     width: 32px;
     border-radius: 50%;
-    background: var(--normal-color);
+    background: var(--nav-normal-color);
     -webkit-transform: translateX(-50%) scale(0.25);
     -moz-transform: translateX(-50%) scale(0.25);
     -ms-transform: translateX(-50%) scale(0.25);
@@ -333,7 +361,7 @@ a:focus {
     content: "\f086";
   }
   .cd-vertical-nav a.active::before, .no-touch .cd-vertical-nav a:hover::before {
-    background-color: var(--active-color);
+    background-color: var(--nav-active-color);
     transition-duration: 0.5s;
     -webkit-transform: translateX(-50%) scale(0.5);
     -moz-transform: translateX(-50%) scale(0.5);
@@ -397,22 +425,15 @@ a:focus {
   height: 44px;
   background: url(../img/cd-arrow-bottom.svg) no-repeat center center;
 }
-
-/* -------------------------------- 
-
-no-js
-
--------------------------------- */
 .no-js .cd-nav-trigger {
   display: none;
 }
-
 .no-js .cd-vertical-nav {
   position: static;
   height: auto;
   width: 100%;
   max-width: none;
-  background-color: var(--background-color);
+  background-color: var(--nav-background-color);
   border-radius: 0;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
@@ -435,10 +456,10 @@ no-js
 .no-js .cd-vertical-nav a {
   padding: 0 1em;
   margin: 1.5em 1em;
-  color: var(--normal-color);
+  color: var(--nav-normal-color);
 }
 .no-js .cd-vertical-nav a.active {
-  color: var(--active-color);
+  color: var(--nav-active-color);
 }
 .no-js .cd-vertical-nav a::after, .no-js .cd-vertical-nav a::before {
   display: none;
@@ -461,12 +482,6 @@ no-js
   background-position: 50% 50%;
   background-repeat: no-repeat;
   padding: 150px 0;
-}
-#name h1 {
-  font-size: 68px;
-  text-shadow: 0 3px rgba(0, 0, 0, 0.1);
-  color: #fff;
-  text-align: center;
 }
 .name-animation {
   display: -webkit-box;
@@ -526,36 +541,31 @@ no-js
 /********************
  * Section Dividers *
  ********************/
- :root {
-  --color1: #ffffff;
-  --color2: #f3f3f3;
-  --color3: #e5e5e5;
-}
 #sectionDivider1 {
-  background-color: var(--color2);
+  background-color: var(--main-color2);
   display: block;
 }
 #sectionDivider1 #trianglePath1 {
-  fill: var(--color1);
-  stroke: var(--color1);
+  fill: var(--main-color1);
+  stroke: var(--main-color1);
 }
 
 #sectionDivider1 #trianglePath2 {
-  fill: var(--color3);
-  stroke: var(--color3);
+  fill: var(--accent-color1);
+  stroke: var(--accent-color1);
 }
 #sectionDivider2 {
-  background-color: var(--color1);
+  background-color: var(--main-color1);
   display: block;
 }
 #sectionDivider2 #trianglePath1 {
-  fill: var(--color2);
-  stroke: var(--color2);
+  fill: var(--main-color2);
+  stroke: var(--main-color2);
 }
 
 #sectionDivider2 #trianglePath2 {
-  fill: var(--color3);
-  stroke: var(--color3);
+  fill: var(--accent-color1);
+  stroke: var(--accent-color1);
 }
 
 /************
@@ -563,7 +573,6 @@ no-js
  ************/
 .carousel {
   max-height: 450px;
-  /*max-width: auto;*/
   margin-bottom: 15px;
 
 }
@@ -578,7 +587,7 @@ no-js
   margin: 0 auto;
 }
 .carousel-caption {
-  background-color: rgba(0,0,0,.675);
+  background-color: var(--carousel-background-color);
   position: absolute;
   left: 0;
   right: 0;
@@ -586,7 +595,7 @@ no-js
   z-index: 10;
   height: 100px;
   padding: 25px 25px 25px 25px;
-  color: #fff;
+  color: var(--carousel-text-color);
   text-align: left;
 }
 .carousel-nav {
@@ -604,34 +613,39 @@ no-js
 }
 
 section#about {
-  background: #ffffff;
+  background: var(--main-color1);
 }
 section#work {
-  background: #f3f3f3;
+  background: var(--main-color2);
 }
 section#research {
-  background: #ffffff;
+  background: var(--main-color1);
 }
 section#education {
-  background: #f3f3f3;
+  background: var(--main-color2);
 }
 
 /************
  * Projects *
  ************/
 section#projects {
-  background: #ffffff;
+  background: var(--main-color1);
 }
 .btn {
   font-weight: 300;
   border: 0;
 }
 .btn.btn-primary {
-  background-color: #52b6ec;
+  background-color: var(--project-button-normal-color);
 }
-.btn.btn-primary:hover,
+.btn.btn-primary:hover {
+  background-color: var(--project-button-hover-color);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 .btn.btn-primary.active {
-  background-color: #1586c3;
+  background-color: var(--project-button-active-color);
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -677,8 +691,7 @@ section#projects {
   position: absolute;
   top: 0;
   left: 0;
-  background: #2c3f52;
-  color: #ed4e6e;
+  background: var(--project-item-background-color);
   height: 100%;
   width: 100%;
 }
@@ -695,8 +708,8 @@ section#projects {
   text-align: center;
   padding: 5px 5px;
   border-radius: 2px;
-  background: #ed4e6e;
-  color: #fff;
+  background: var(--project-item-button-background-color);
+  color: var(--project-item-button-font-color);
 }
 .no-touch figure:hover img,
 figure.cs-hover img {
@@ -761,21 +774,21 @@ figure.cs-hover img {
  * Awards *
  **********/
 section#awards {
-  background: #f3f3f3;
+  background: var(--main-color2);
 }
 
 /**************
  * Activities *
  **************/
 section#activities {
-  background: #ffffff;
+  background: var(--main-color1);
 }
 
 /****************
  * Volunteering *
  ****************/
 section#volunteer {
-  background: #f3f3f3;
+  background: var(--main-color2);
 }
 
 /**************
@@ -783,14 +796,13 @@ section#volunteer {
  **************/
 section#contact {
   padding-top: 20px;
-  background-color: #222;
-  color: #999;
+  background-color: var(--contact-background-color);
 }
 #contact .box a {
-  color: #999;
+  color: var(--contact-font-color);
 }
 #contact .box a:hover {
-  color: #52b6ec;
+  color: var(--contact-hover-color);
 }
 ul.contact {
   list-style: none;
@@ -808,15 +820,11 @@ ul.contact > li > a i {
   margin-right: 10px;
 }
 .icon-contact {
-  border: 0;
-  color: #fff;
   border-radius: 100%;
-  display: inline-block !important;
   width: 36px;
   height: 36px;
   line-height: 36px;
   text-align: center;
-  padding: 0;
 }
 .fa-facebook {
   background: #4f7dd4;
@@ -832,16 +840,6 @@ ul.contact > li > a i {
 }
 .fa-file-text {
   background: #dc422b;
-}
-
-/**********
- * Footer *
- **********/
-#footer a {
-  color: #e5e5e5;
-}
-#footer a:hover {
-  color: #e5e5e5;
 }
 
 /********************
