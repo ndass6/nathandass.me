@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
   var scrolling = false;
+  var prev;
   var contentSections = $('.cd-section'),
     verticalNavigation = $('.cd-vertical-nav'),
     navigationItems = verticalNavigation.find('a'),
@@ -39,7 +40,7 @@ jQuery(document).ready(function($) {
     var halfWindowHeight = $(window).height()/2,
       scrollTop = $(window).scrollTop();
     var other = false;
-    contentSections.each(function(){
+    contentSections.each(function() {
       var section = $(this),
         sectionId = section.attr('id'),
         navigationItem = navigationItems.filter('[href^="#'+ sectionId +'"]');
@@ -47,6 +48,7 @@ jQuery(document).ready(function($) {
           && ( section.offset().top + section.height() - halfWindowHeight > scrollTop) )
       {
         navigationItem.addClass('active');
+        prev = sectionId;
         other = true;
       }
       else {
@@ -56,10 +58,16 @@ jQuery(document).ready(function($) {
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
       navigationItems.filter('[href^="#volunteer"]').removeClass('active');
       navigationItems.filter('[href^="#contact"]').addClass('active');
+      prev = "contact"
       other = true;
     }
-    if (!other || $(window).scrollTop() == 0) {
+    if ($(window).scrollTop() == 0) {
       navigationItems.filter('[href^="#name"]').addClass('active');
+      prev = "name";
+      other = true;
+    }
+    if (!other) {
+      navigationItems.filter('[href^="#' + prev + '"]').addClass('active');
     }
     scrolling = false;
   }
