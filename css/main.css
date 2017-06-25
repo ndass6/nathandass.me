@@ -477,11 +477,7 @@ a:focus {
  * Name *
  ********/
 #name {
-  background-image: url(../images/slider-bg.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+  background-color: var(--main-color1);
   padding: 150px 0;
 }
 .name-animation {
