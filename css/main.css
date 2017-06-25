@@ -7,11 +7,13 @@
  * Color Schemes *
  *****************/
 :root {
+  --name-background-color: #222222;
+
   --main-color1: #ffffff;
   --main-color2: #f3f3f3;
   --accent-color1: #e5e5e5;
 
-  --font-normal-color: #777;
+  --font-normal-color: #777777;
 
   --a-normal-color: #52b6ec;
   --a-hover-color: #80c9f1;
@@ -33,7 +35,7 @@
   --project-item-button-font-color: #ffffff;
 
   --contact-background-color: #222222;
-  --contact-font-color: #ffffff;
+  --contact-font-color: #777777;
   --contact-hover-color: #52b6ec;
   --contact-icons-color: #ffffff;
 }
@@ -610,23 +612,23 @@ a:focus {
 }
 
 section#about {
-  background: var(--main-color1);
+  background: var(--main-color2);
 }
 section#work {
-  background: var(--main-color2);
-}
-section#research {
   background: var(--main-color1);
 }
-section#education {
+section#research {
   background: var(--main-color2);
+}
+section#education {
+  background: var(--main-color1);
 }
 
 /************
  * Projects *
  ************/
 section#projects {
-  background: var(--main-color1);
+  background: var(--main-color2);
 }
 .btn {
   font-weight: 300;
@@ -771,21 +773,21 @@ figure.cs-hover img {
  * Awards *
  **********/
 section#awards {
-  background: var(--main-color2);
+  background: var(--main-color1);
 }
 
 /**************
  * Activities *
  **************/
 section#activities {
-  background: var(--main-color1);
+  background: var(--main-color2);
 }
 
 /****************
  * Volunteering *
  ****************/
 section#volunteer {
-  background: var(--main-color2);
+  background: var(--main-color1);
 }
 
 /**************
@@ -793,7 +795,7 @@ section#volunteer {
  **************/
 section#contact {
   padding-top: 20px;
-  background-color: var(--contact-background-color);
+  background-color: var(--main-color2);
 }
 #contact .box a {
   color: var(--contact-font-color);
