@@ -6,46 +6,60 @@
 /*****************
  * Color Schemes *
  *****************/
-:root {
-  --name-background-color: #222222;
+body {
+  --main-color1: #4484CE;
+  --main-color2: #1F3C5E;
+  --accent-color1: #386DA9;
 
-  --main-color1: #e5e5e5;
-  --main-color2: #ffffff;
-  --accent-color1: #f3f3f3;
+  --name-color: #FFFFFF;
 
-  --font-normal-color: #777777;
+  --header-normal-color: #FFFFFF;
+  --font-normal-color: #FFFFFF;
 
-  --a-normal-color: #52b6ec;
-  --a-hover-color: #80c9f1;
+  --a-normal-color: #52B6EC;
+  --a-hover-color: #81C9F1;
 
-  --nav-normal-color: #8c8c8c;
-  --nav-hover-color: #c0a672;
-  --nav-active-color: #c0a672;
-  --nav-background-color: #3a2c41;
+  --nav-normal-color: #81C9F1;
+  --nav-hover-color: #FFFFFF;
+  --nav-active-color: #FFFFFF;
+  --nav-background-color: #132439;
 
-  --carousel-background-color: rgba(0,0,0,.675);
-  --carousel-text-color: #ffffff;
+  --carousel-background-color: rgba(56, 109, 169, 0.65);
+  --carousel-arrow-color: rgba(56, 109, 169, 0.65);
+  --carousel-text-color: #FFFFFF;
 
-  --project-button-normal-color: #52b6ec;
-  --project-button-hover-color: #1586c3;
-  --project-button-active-color: #1586c3;
+  --project-button-normal-color: #52B6EC;
+  --project-button-hover-color: #386DA9;
+  --project-button-active-color: #386DA9;
 
-  --project-item-background-color: #2c3f52;
-  --project-item-button-background-color: #ed4e6e;
-  --project-item-button-font-color: #ffffff;
+  --project-item-background-color: #386DA9;
+  --project-item-button-background-color: #52b6ec;
+  --project-item-button-font-color: #FFFFFF;
 
-  --contact-background-color: #222222;
-  --contact-font-color: #777777;
-  --contact-hover-color: #52b6ec;
+  --contact-font-color: #FFFFFF;
+  --contact-hover-color: #81C9F1;
   --contact-icons-color: #ffffff;
+
+  --icon-color1: #CC0000;
+  --icon-color2: #2ECC71;
+  --icon-color3: #3498DB;
+  --icon-color4: #8E44AD;
+  --icon-color5: #1ABC9C;
+  --icon-color6: #DFDCE3;
+  --icon-color7: #74AFAD;
+  --icon-color8: #FFE658;
+  --icon-color9: #FF6600;
 }
 
 /***********
  * General *
  ***********/
 h1, h2, h3, h4, h5, h6 {
-  color: var(--font-normal-color);
+  color: var(--header-normal-color);
   font-weight: 300;
+}
+p, small, li {
+  color: var(--font-normal-color);
 }
 a {
   color: var(--a-normal-color);
@@ -712,7 +726,7 @@ section#projects {
 }
 .no-touch figure:hover img,
 figure.cs-hover img {
-  transform: translateY(-26px) scale(0.75);
+  transform: translateY(-27px) scale(0.75);
 }
 .project-items li h3 {
   text-align: center;
@@ -800,7 +814,8 @@ section#contact {
 #contact .box a {
   color: var(--contact-font-color);
 }
-#contact .box a:hover {
+#contact .box a:hover,
+#contact .box a:focus {
   color: var(--contact-hover-color);
 }
 ul.contact {
@@ -883,29 +898,29 @@ ul.contact > li > a i {
   margin-bottom: 10px;
 }
 .icon-color1 {
-  background-color: #cc0000;
+  background-color: var(--icon-color1);
 }
 .icon-color2 {
-  background-color: #2ecc71;
+  background-color: var(--icon-color2);
 }
 .icon-color3 {
-  background-color: #3498db;
+  background-color: var(--icon-color3);
 }
 .icon-color4 {
-  background-color: #8e44ad;
+  background-color: var(--icon-color4);
 }
 .icon-color5 {
-  background-color: #1abc9c;
+  background-color: var(--icon-color5);
 }
 .icon-color6 {
-  background-color: #2c3e50;
+  background-color: var(--icon-color6);
 }
 .icon-color7 {
-  background-color: #74afad;
+  background-color: var(--icon-color7);
 }
 .icon-color8 {
-  background-color: #ffe658;
+  background-color: var(--icon-color8);
 }
 .icon-color9 {
-  background-color: #ff6600;
+  background-color: var(--icon-color9);
 }
