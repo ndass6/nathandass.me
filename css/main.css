@@ -668,6 +668,7 @@ section#projects {
 }
 .btn {
   font-weight: 300;
+  margin-bottom: 10px;
   border: 0;
 }
 .btn.btn-primary {
@@ -746,7 +747,7 @@ section#projects {
   background: var(--project-item-button-background-color);
   color: var(--project-item-button-font-color);
 }
-.no-touch figure:hover img,
+figure:hover img,
 figure.cs-hover img {
   transform: translateY(-27px) scale(0.75);
 }
