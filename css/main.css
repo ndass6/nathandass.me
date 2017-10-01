@@ -107,7 +107,7 @@ a:focus {
  **********/
 .cd-stretchy-nav {
   position: fixed;
-  z-index: 2;
+  z-index: 999;
   top: 40px;
   right: 5%;
   pointer-events: none;
