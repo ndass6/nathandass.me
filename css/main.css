@@ -699,18 +699,16 @@ section#projects {
   display: inline-block;
 }
 .project-items {
-  padding: 20px 20px 100px 20px;
-  max-width: 1300px;
+  padding: 0;
   margin: 0 auto;
   list-style: none;
   text-align: center;
 }
 .project-items li {
   display: inline-block;
-  width: 32%;
   margin: 0;
-  padding: 20px;
   position: relative;
+  max-width: 370px;
 }
 .project-items figure {
   margin: 0;
@@ -718,6 +716,7 @@ section#projects {
 }
 .project-items figure img {
   max-width: 100%;
+  max-height: 250px;
   display: block;
   position: relative;
   z-index: 10;
@@ -749,10 +748,11 @@ section#projects {
 }
 figure:hover img,
 figure.cs-hover img {
-  transform: translateY(-27px) scale(0.75);
+  transform: translateY(-12.5%) scale(0.75);
 }
-.project-items li h3 {
+.project-items li p {
   text-align: center;
+  font-size: 20px;
 }
 /* Start: Recommended Isotope styles */
 /**** Isotope Filtering ****/
