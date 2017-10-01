@@ -4,7 +4,7 @@ var gEls = document.querySelectorAll('.name-animation g');
 var dotEls = document.querySelectorAll('.name-animation .dot g');
 var innerWidth = window.innerWidth;
 var maxWidth = 1082;
-var logoScale = innerWidth <= maxWidth ? innerWidth / maxWidth : 1;
+var logoScale = innerWidth >= maxWidth ? innerWidth / maxWidth : 1;
 var logoTimeline = anime.timeline();
 
 logoEl.style.transform = 'translateY(50px) scale('+logoScale+')';
@@ -27,7 +27,7 @@ logoTimeline
   .add({
   targets: '.dot-e',
   translateX: [
-    { value: -1000, duration: 820, delay: 200, easing: 'easeInQuart' }
+    { value: -900, duration: 820, delay: 200, easing: 'easeInQuart' }
   ],
   scale: [
     { value: [0, 1], duration: 200, easing: 'easeOutBack' },
