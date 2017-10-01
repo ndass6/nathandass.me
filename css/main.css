@@ -19,10 +19,11 @@ body {
   --a-normal-color: #52B6EC;
   --a-hover-color: #81C9F1;
 
-  --nav-normal-color: #81C9F1;
-  --nav-hover-color: #FFFFFF;
-  --nav-active-color: #FFFFFF;
-  --nav-background-color: #132439;
+  --nav-normal-color: rgba(255, 255, 255, 0.7);
+  --nav-hover-color: rgba(255, 255, 255, 0.85);
+  --nav-active-color: rgba(255, 255, 255, 1);
+  --nav-active-line-color: #0A9581;
+  --nav-background-color: #9ACD91;
 
   --carousel-background-color: rgba(56, 109, 169, 0.65);
   --carousel-arrow-color: rgba(56, 109, 169, 0.65);
@@ -95,46 +96,69 @@ a:focus {
 .big-gap {
   margin-bottom: 100px;
 }
+.blur {
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  filter: blur(10px);
+ }
 
 /**********
  * Navbar *
  **********/
-.cd-vertical-nav, .cd-vertical-nav-ul {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  list-style: none;
-}
-.cd-nav-trigger {
-  display: block;
+.cd-stretchy-nav {
   position: fixed;
   z-index: 2;
-  bottom: 30px;
+  top: 40px;
   right: 5%;
-  height: 44px;
-  width: 44px;
-  border-radius: 0.25em;
+  pointer-events: none;
+}
+.cd-stretchy-nav .stretchy-nav-bg {
+  /* this is the stretching navigation background */
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
   background: var(--nav-background-color);
-  /* reset button style */
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  border: none;
-  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transition: height 0.2s, box-shadow 0.2s;
+  -moz-transition: height 0.2s, box-shadow 0.2s;
+  transition: height 0.2s, box-shadow 0.2s;
+}
+.cd-stretchy-nav.nav-is-visible {
+  pointer-events: auto;
+}
+.cd-stretchy-nav.nav-is-visible .stretchy-nav-bg {
+  height: 100%;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cd-nav-trigger {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  /* replace text with image */
+  overflow: hidden;
+  white-space: nowrap;
+  color: transparent;
+  pointer-events: auto;
+  text-decoration: none;
+}
+.cd-nav-trigger span, .cd-nav-trigger span::after, .cd-nav-trigger span::before {
+  /* this is the hamburger icon */
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: var(--nav-active-color);
 }
 .cd-nav-trigger span {
-  /* central dot */
-  position: absolute;
-  height: 4px;
-  width: 4px;
-  background-color: var(--nav-background-color);
-  border-radius: 50%;
+  /* middle line of the hamburger icon */
   left: 50%;
   top: 50%;
   bottom: auto;
@@ -144,349 +168,341 @@ a:focus {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
-.cd-nav-trigger span::before, .cd-nav-trigger span::after {
-  /* bottom and top dots */
+.cd-nav-trigger span::after, .cd-nav-trigger span::before {
+  /* top and bottom lines of the hamburger icon */
   content: '';
-  position: absolute;
+  top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--nav-background-color);
-  border-radius: inherit;
-}
-.cd-nav-trigger span::before {
-  top: -9px;
-}
-.cd-nav-trigger span::after {
-  bottom: -9px;
-}
-@media only screen and (min-width: 800px) {
-  .cd-nav-trigger {
-    display: none;
-  }
-}
-.cd-vertical-nav {
-  position: fixed;
-  z-index: 1;
-  right: 5%;
-  bottom: 30px;
-  width: 90%;
-  max-width: 400px;
-  max-height: 90%;
-  overflow-y: auto;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0);
-  -webkit-transform-origin: right bottom;
-  -moz-transform-origin: right bottom;
-  -ms-transform-origin: right bottom;
-  -o-transform-origin: right bottom;
-  transform-origin: right bottom;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transition: -webkit-transform 0.2s;
   -moz-transition: -moz-transform 0.2s;
   transition: transform 0.2s;
-  border-radius: 0.25em;
-  background-color: rgba(234, 242, 227, 0.9);
 }
-.cd-vertical-nav a {
-  display: block;
-  padding: 1em;
-  color: var(--nav-background-color);
-  font-weight: bold;
-  border-bottom: 1px solid rgba(58, 44, 65, 0.1);
+.cd-nav-trigger span::before {
+  -webkit-transform: translateY(-6px);
+  -moz-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  -o-transform: translateY(-6px);
+  transform: translateY(-6px);
 }
-.cd-vertical-nav a.active {
-  color: var(--nav-background-color);
+.cd-nav-trigger span::after {
+  -webkit-transform: translateY(6px);
+  -moz-transform: translateY(6px);
+  -ms-transform: translateY(6px);
+  -o-transform: translateY(6px);
+  transform: translateY(6px);
 }
-.cd-vertical-nav.open {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-  -webkit-overflow-scrolling: touch;
+.no-touch .cd-nav-trigger:hover ~ .stretchy-nav-bg {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
 }
-.cd-vertical-nav.open + .cd-nav-trigger {
+.nav-is-visible .cd-nav-trigger span {
   background-color: transparent;
 }
-.cd-vertical-nav.open + .cd-nav-trigger span {
-  background-color: var(--nav-background-color);
+.nav-is-visible .cd-nav-trigger span::before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
-.cd-vertical-nav.open + .cd-nav-trigger span::before, .cd-vertical-nav.open + .cd-nav-trigger span::after {
-  /* transform dots in 'X' icon */
-  height: 3px;
-  width: 20px;
-  border-radius: 0;
-  left: -8px;
-}
-.cd-vertical-nav.open + .cd-nav-trigger span::before {
+.nav-is-visible .cd-nav-trigger span::after {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 1px;
 }
-.cd-vertical-nav.open + .cd-nav-trigger span::after {
-  -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -ms-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-  transform: rotate(135deg);
-  bottom: 0;
+
+.cd-stretchy-nav ul {
+  position: relative;
+  z-index: 2;
+  padding: 60px 0 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0.3s;
+  -moz-transition: visibility 0.3s;
+  transition: visibility 0.3s;
+  text-align: right;
+  list-style: none;
 }
-@media only screen and (min-width: 800px) {
-  .cd-vertical-nav {
-    /* reset style */
-    right: 0;
-    top: 0;
-    bottom: auto;
-    height: 100vh;
-    width: 90px;
-    max-width: none;
-    max-height: none;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    background-color: transparent;
-    /* vertically align its content*/
-    display: table;
-  }
-  .cd-vertical-nav::before {
-    /* this is the navigation background */
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--nav-background-color);
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.4s;
-    -moz-transition: -moz-transform 0.4s;
-    transition: transform 0.4s;
-  }
-  .no-touch .cd-vertical-nav:hover::before, .touch .cd-vertical-nav::before {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-  }
-  .cd-vertical-nav ul {
-    /* vertically align <ul> inside <nav>*/
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-  }
-  .cd-vertical-nav a {
-    position: relative;
-    padding: 3em 0 0;
-    margin: 1.4em auto;
-    border-bottom: none;
-    font-size: 1.2rem;
-    color: var(--nav-background-color);
-  }
-  .cd-vertical-nav a.active {
-    color: var(--nav-background-color);
-  }
-  .cd-vertical-nav a::before, .cd-vertical-nav a::after {
-    /* used to create the filled circle and the background icon */
-    content: '';
-    position: absolute;
-    left: 50%;
-    /* Force Hardware Acceleration */
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-  .cd-vertical-nav a::before {
-    /* filled circle */
-    top: 0;
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    background: var(--nav-normal-color);
-    -webkit-transform: translateX(-50%) scale(0.25);
-    -moz-transform: translateX(-50%) scale(0.25);
-    -ms-transform: translateX(-50%) scale(0.25);
-    -o-transform: translateX(-50%) scale(0.25);
-    transform: translateX(-50%) scale(0.25);
-    -webkit-transition: -webkit-transform 0.4s, background-color 0.2s;
-    -moz-transition: -moz-transform 0.4s, background-color 0.2s;
-    transition: transform 0.4s, background-color 0.2s;
-  }
-  .cd-vertical-nav a::after {
-    opacity: 0;
-    top: 8px;
-    height: 16px;
-    width: 16px;
-    font-family: FontAwesome;
-    display: inline-block;
-    -webkit-transform: translateX(-50%) scale(0);
-    -moz-transform: translateX(-50%) scale(0);
-    -ms-transform: translateX(-50%) scale(0);
-    -o-transform: translateX(-50%) scale(0);
-    transform: translateX(-50%) scale(0);
-    -webkit-transition: -webkit-transform 0.4s 0s, opacity 0.1s 0.3s;
-    -moz-transition: -moz-transform 0.4s 0s, opacity 0.1s 0.3s;
-    transition: transform 0.4s 0s, opacity 0.1s 0.3s;
-  }
-  /*Icons*/
-  /*http://fontawesome.io/cheatsheet/*/
-  .cd-vertical-nav a.top-icon::after {
-    content: "\f015";
-  }
-  .cd-vertical-nav a.about-icon::after {
-    content: "\f007";
-  }
-  .cd-vertical-nav a.work-icon::after {
-    content: "\f1ad";
-  }
-  .cd-vertical-nav a.research-icon::after {
-    content: "\f0c3";
-  }
-  .cd-vertical-nav a.education-icon::after {
-    content: "\f19d";
-  }
-  .cd-vertical-nav a.projects-icon::after {
-    content: "\f109";
-  }
-  .cd-vertical-nav a.awards-icon::after {
-    content: "\f091";
-  }
-  .cd-vertical-nav a.activities-icon::after {
-    content: "\f0c0";
-  }
-  .cd-vertical-nav a.volunteer-icon::after {
-    content: "\f2b5";
-  }
-  .cd-vertical-nav a.contact-icon::after {
-    content: "\f086";
-  }
-  .cd-vertical-nav a.active::before, .no-touch .cd-vertical-nav a:hover::before {
-    background-color: var(--nav-active-color);
-    transition-duration: 0.5s;
-    -webkit-transform: translateX(-50%) scale(0.5);
-    -moz-transform: translateX(-50%) scale(0.5);
-    -ms-transform: translateX(-50%) scale(0.5);
-    -o-transform: translateX(-50%) scale(0.5);
-    transform: translateX(-50%) scale(0.5);
-  }
-  .cd-vertical-nav .label {
-    display: block;
-    /* Force Hardware Acceleration */
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.4s;
-    -moz-transition: -moz-transform 0.4s;
-    transition: transform 0.4s;
-  }
-  .no-touch .cd-vertical-nav:hover a::before, .no-touch .cd-vertical-nav:hover a::after, .touch .cd-vertical-nav li:nth-of-type(n) a::before, .touch .cd-vertical-nav li:nth-of-type(n) a::after {
-    -webkit-transform: translateX(-50%) scale(1);
-    -moz-transform: translateX(-50%) scale(1);
-    -ms-transform: translateX(-50%) scale(1);
-    -o-transform: translateX(-50%) scale(1);
-    transform: translateX(-50%) scale(1);
-    /* set a rotation to fix bug on Firefox - http://gielberkers.com/how-to-fix-shaking-css-transitions-in-firefox/ */
-    -moz-transform: translateX(-50%) scale(1) rotate(0.02deg);
-  }
-  .no-touch .cd-vertical-nav:hover a::after, .touch .cd-vertical-nav a::after {
-    opacity: 1;
-    -webkit-transition: -webkit-transform 0.4s, opacity 0s;
-    -moz-transition: -moz-transform 0.4s, opacity 0s;
-    transition: transform 0.4s, opacity 0s;
-  }
-  .no-touch .cd-vertical-nav:hover .label, .touch .cd-vertical-nav .label {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-.cd-scroll-down {
-  position: absolute;
-  left: 50%;
-  right: auto;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: 20px;
-  width: 44px;
-  height: 44px;
-  background: url(../img/cd-arrow-bottom.svg) no-repeat center center;
-}
-.no-js .cd-nav-trigger {
-  display: none;
-}
-.no-js .cd-vertical-nav {
-  position: static;
-  height: auto;
-  width: 100%;
-  max-width: none;
-  background-color: var(--nav-background-color);
-  border-radius: 0;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-}
-.no-js .cd-vertical-nav::before {
-  display: none;
-}
-.no-js .cd-vertical-nav ul::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-.no-js .cd-vertical-nav li {
-  display: inline-block;
-  float: left;
-}
-.no-js .cd-vertical-nav a {
-  padding: 0 1em;
-  margin: 1.5em 1em;
+.cd-stretchy-nav ul a {
+  position: relative;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 calc(1em + 60px) 0 1em;
   color: var(--nav-normal-color);
+  font-size: 1.4rem;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  transition: color 0.2s;
 }
-.no-js .cd-vertical-nav a.active {
+.cd-stretchy-nav ul a::after {
+  /* navigation item icons */
+  font-family: FontAwesome;
+  content: '';
+  position: absolute;
+  width: 16px;
+  right: 22px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale(0);
+  -moz-transform: translateY(-50%) scale(0);
+  -ms-transform: translateY(-50%) scale(0);
+  -o-transform: translateY(-50%) scale(0);
+  transform: translateY(-50%) scale(0);
+  opacity: .6;
+}
+.cd-stretchy-nav ul a::before {
+  /* line visible next to the active navigation item */
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 16px;
+  top: 50%;
+  right: 60px;
+  -webkit-transform: translateX(3px) translateY(-50%) scaleY(0);
+  -moz-transform: translateX(3px) translateY(-50%) scaleY(0);
+  -ms-transform: translateX(3px) translateY(-50%) scaleY(0);
+  -o-transform: translateX(3px) translateY(-50%) scaleY(0);
+  transform: translateX(3px) translateY(-50%) scaleY(0);
+  background-color: var(--nav-active-line-color);
+}
+.cd-stretchy-nav ul li:first-of-type a::after {
+  content: "\f015";
+}
+.cd-stretchy-nav ul li:nth-of-type(2) a::after {
+  content: "\f007";
+}
+.cd-stretchy-nav ul li:nth-of-type(3) a::after {
+  content: "\f1ad";
+}
+.cd-stretchy-nav ul li:nth-of-type(4) a::after {
+  content: "\f0c3";
+}
+.cd-stretchy-nav ul li:nth-of-type(5) a::after {
+  content: "\f19d";
+}
+.cd-stretchy-nav ul li:nth-of-type(6) a::after {
+  content: "\f109";
+}
+.cd-stretchy-nav ul li:nth-of-type(7) a::after {
+  content: "\f091";
+}
+.cd-stretchy-nav ul li:nth-of-type(8) a::after {
+  content: "\f0c0";
+}
+.cd-stretchy-nav ul li:nth-of-type(9) a::after {
+  content: "\f2b5";
+}
+.cd-stretchy-nav ul li:nth-of-type(10) a::after {
+  content: "\f086";
+}
+.cd-stretchy-nav ul span {
+  /* navigation item labels */
+  display: block;
+  opacity: 0;
+  -webkit-transform: translateX(-25px);
+  -moz-transform: translateX(-25px);
+  -ms-transform: translateX(-25px);
+  -o-transform: translateX(-25px);
+  transform: translateX(-25px);
+}
+
+.cd-stretchy-nav.nav-is-visible ul {
+  visibility: visible;
+}
+.cd-stretchy-nav.nav-is-visible ul a::after {
+  /* navigation item icons */
+  -webkit-transform: translateY(-50%) scale(1);
+  -moz-transform: translateY(-50%) scale(1);
+  -ms-transform: translateY(-50%) scale(1);
+  -o-transform: translateY(-50%) scale(1);
+  transform: translateY(-50%) scale(1);
+  -webkit-animation: scaleIn 0.15s backwards;
+  -moz-animation: scaleIn 0.15s backwards;
+  animation: scaleIn 0.15s backwards;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.cd-stretchy-nav.nav-is-visible ul a.active {
   color: var(--nav-active-color);
 }
-.no-js .cd-vertical-nav a::after, .no-js .cd-vertical-nav a::before {
-  display: none;
+.cd-stretchy-nav.nav-is-visible ul a.active::after {
+  opacity: 1;
 }
-.no-js .cd-vertical-nav .label {
+.cd-stretchy-nav.nav-is-visible ul a.active::before {
+  -webkit-transform: translateX(3px) translateY(-50%) scaleY(1);
+  -moz-transform: translateX(3px) translateY(-50%) scaleY(1);
+  -ms-transform: translateX(3px) translateY(-50%) scaleY(1);
+  -o-transform: translateX(3px) translateY(-50%) scaleY(1);
+  transform: translateX(3px) translateY(-50%) scaleY(1);
+  -webkit-transition: -webkit-transform 0.15s 0.3s;
+  -moz-transition: -moz-transform 0.15s 0.3s;
+  transition: transform 0.15s 0.3s;
+}
+.cd-stretchy-nav.nav-is-visible ul span {
+  opacity: 1;
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
+  -webkit-animation: slideIn 0.15s backwards;
+  -moz-animation: slideIn 0.15s backwards;
+  animation: slideIn 0.15s backwards;
+  -webkit-transition: -webkit-transform 0.2s;
+  -moz-transition: -moz-transform 0.2s;
+  transition: transform 0.2s;
+}
+.no-touch .cd-stretchy-nav.nav-is-visible ul a:hover {
+  color: var(--nav-hover-color);
+}
+.no-touch .cd-stretchy-nav.nav-is-visible ul a:hover::after {
+  opacity: 1;
+}
+.no-touch .cd-stretchy-nav.nav-is-visible ul a:hover span {
+  -webkit-transform: translateX(-5px);
+  -moz-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  -o-transform: translateX(-5px);
+  transform: translateX(-5px);
+}
+.cd-stretchy-nav.nav-is-visible ul li:first-of-type a::after,
+.cd-stretchy-nav.nav-is-visible ul li:first-of-type span {
+  -webkit-animation-delay: 0.025s;
+  -moz-animation-delay: 0.025s;
+  animation-delay: 0.025s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(2) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(2) span {
+  -webkit-animation-delay: 0.05s;
+  -moz-animation-delay: 0.05s;
+  animation-delay: 0.05s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(3) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(3) span {
+  -webkit-animation-delay: 0.075s;
+  -moz-animation-delay: 0.075s;
+  animation-delay: 0.075s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(4) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(4) span {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(5) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(5) span {
+  -webkit-animation-delay: 0.125s;
+  -moz-animation-delay: 0.125s;
+  animation-delay: 0.125s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(6) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(6) span {
+  -webkit-animation-delay: 0.15s;
+  -moz-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(7) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(7) span {
+  -webkit-animation-delay: 0.175s;
+  -moz-animation-delay: 0.175s;
+  animation-delay: 0.175s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(8) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(8) span {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(9) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(9) span {
+  -webkit-animation-delay: 0.225s;
+  -moz-animation-delay: 0.225s;
+  animation-delay: 0.225s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(10) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(10) span {
+  -webkit-animation-delay: 0.25s;
+  -moz-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+
+/* Keyframes */
+@-webkit-keyframes scaleIn {
+  from {
+    -webkit-transform: translateY(-50%) scale(0);
+  }
+  to {
+    -webkit-transform: translateY(-50%) scale(1);
+  }
+}
+@-moz-keyframes scaleIn {
+  from {
+    -moz-transform: translateY(-50%) scale(0);
+  }
+  to {
+    -moz-transform: translateY(-50%) scale(1);
+  }
+}
+@keyframes scaleIn {
+  from {
+    -webkit-transform: translateY(-50%) scale(0);
+    -moz-transform: translateY(-50%) scale(0);
+    -ms-transform: translateY(-50%) scale(0);
+    -o-transform: translateY(-50%) scale(0);
+    transform: translateY(-50%) scale(0);
+  }
+  to {
+    -webkit-transform: translateY(-50%) scale(1);
+    -moz-transform: translateY(-50%) scale(1);
+    -ms-transform: translateY(-50%) scale(1);
+    -o-transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
+  }
+}
+@-webkit-keyframes slideIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-25px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes slideIn {
+  from {
+    opacity: 0;
+    -moz-transform: translateX(-25px);
+  }
+  to {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-25px);
+    -moz-transform: translateX(-25px);
+    -ms-transform: translateX(-25px);
+    -o-transform: translateX(-25px);
+    transform: translateX(-25px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
 
 /********
@@ -856,7 +872,6 @@ ul.contact > li > a i {
 .fa-file-text {
   background: #dc422b;
 }
-
 
 /******************
  * Grow animation *

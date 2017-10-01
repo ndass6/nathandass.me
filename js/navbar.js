@@ -1,33 +1,41 @@
 jQuery(document).ready(function($) {
   var scrolling = false;
+  var blur = true;
   var prev;
   var contentSections = $('.cd-section'),
-    verticalNavigation = $('.cd-vertical-nav'),
-    navigationItems = verticalNavigation.find('a'),
-    navTrigger = $('.cd-nav-trigger'),
-    scrollArrow = $('.cd-scroll-down');
+    navigation = $('.cd-stretchy-nav'),
+    navigationItems = navigation.find('a'),
+    navTrigger = $('.cd-nav-trigger');
   updateSections();
 
-  $(window).on('scroll', checkScroll);
-
-  //smooth scroll to the selected section
-  verticalNavigation.on('click', 'a', function(event){
+  if( navigation.length > 0 ) {
+    
+    navigation.each(function(){
+      var stretchyNav = $(this);
+      
+      navTrigger.on('click', function(event){
         event.preventDefault();
-        smoothScroll($(this.hash));
-        verticalNavigation.removeClass('open');
+        stretchyNav.toggleClass('nav-is-visible');
+      });
     });
 
-    //smooth scroll to the second section
-    scrollArrow.on('click', function(event){
-      event.preventDefault();
-        smoothScroll($(this.hash));
+    $(document).on('click', function(event){
+      ( !$(event.target).is('.cd-nav-trigger') && !$(event.target).is('.cd-nav-trigger span') ) && navigation.removeClass('nav-is-visible');
     });
+  }
 
-  // open navigation if user clicks the .cd-nav-trigger - small devices only
-    navTrigger.on('click', function(event){
-      event.preventDefault();
-      verticalNavigation.toggleClass('open');
-    });
+  $(window).on('scroll', checkScroll);
+  
+  navigationItems.on('click', function(event){
+    event.preventDefault();
+    if (blur) {
+      $('.cd-content').addClass("blur");
+    }
+    else {
+      $('.cd-content').removeClass("blur");
+    }
+    blur = !blur;
+  });
 
   function checkScroll() {
     if( !scrolling ) {
@@ -70,12 +78,5 @@ jQuery(document).ready(function($) {
       navigationItems.filter('[href^="#' + prev + '"]').addClass('active');
     }
     scrolling = false;
-  }
-
-  function smoothScroll(target) {
-        $('body,html').animate(
-          {'scrollTop':target.offset().top},
-          300
-        );
   }
 });
