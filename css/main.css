@@ -601,9 +601,12 @@ a:focus {
  * About Me *
  ************/
 .carousel {
-  max-height: 450px;
   margin-bottom: 15px;
-
+}
+.carousel-content {
+  text-align: center;
+  align-content: center;
+  align-self: center;
 }
 .carousel-picture {
   text-align: center;
@@ -613,6 +616,7 @@ a:focus {
 .carousel-picture img {
   border-radius: 50px;
   max-height: 450px;
+  max-width: 100%;
   margin: 0 auto;
 }
 .carousel-caption {
@@ -622,10 +626,11 @@ a:focus {
   right: 0;
   bottom: 0;
   z-index: 10;
-  height: 100px;
-  padding: 25px 25px 25px 25px;
-  color: var(--carousel-text-color);
+  padding: 25px 10px 15px 25px;
   text-align: left;
+}
+.carousel-caption > p {
+  color: var(--carousel-text-color);
 }
 .carousel-nav {
   width: 60%;
@@ -636,6 +641,7 @@ a:focus {
 }
 .carousel-nav img {
   width: 150px;
+  max-width: 100%;
   height: auto;
   vertical-align: middle;
   display: inline;
