@@ -50,6 +50,9 @@ body {
   --icon-color7: #74AFAD;
   --icon-color8: #FFE658;
   --icon-color9: #FF6600;
+
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /***********
