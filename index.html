@@ -17,6 +17,22 @@
 </head>
 
 <body id="page-top">
+  <div class="md-modal md-effect" id="aldente-modal">
+    <div class="md-content">
+      <h3>Modal title</h3>
+      <div>
+        <p>This is a modal window. You can do the following things with it:</p>
+        <ul>
+          <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+          <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+          <li><strong>Close:</strong> click on the button below to close the modal.</li>
+        </ul>
+      <center><a class="md-close">Close</a></center>
+      </div>
+    </div>
+  </div>
+  <div class="md-overlay"></div>
+
   <nav class="cd-stretchy-nav">
     <a class="cd-nav-trigger" href="#0">
       <span aria-hidden="true"></span>
@@ -467,6 +483,7 @@
                 <figcaption>
                   <h5>
                     <a href="files/aldente-video.mp4" target="_blank">Video</a>
+                    <a class="md-trigger" data-modal="aldente-modal" target="">Details</a>
                   </h5>
                 </figcaption>
               </figure>
@@ -1171,8 +1188,10 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.isotope.min.js"></script>
   <script src='js/ymlarg.js'></script>
+  <script src="js/classie.js"></script>
   <script src="js/name.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/modal.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/scroll.js"></script>
   <script src="js/jquery.easing.min.js"></script>
