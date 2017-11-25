@@ -8,9 +8,8 @@ jQuery(document).ready(function($) {
     navTrigger = $('.cd-nav-trigger');
   updateSections();
 
-  if( navigation.length > 0 ) {
-    
-    navigation.each(function(){
+  if (navigation.length > 0) {
+    navigation.each(function() {
       var stretchyNav = $(this);
       
       navTrigger.on('click', function(event){
@@ -19,8 +18,12 @@ jQuery(document).ready(function($) {
       });
     });
 
-    $(document).on('click', function(event){
-      ( !$(event.target).is('.cd-nav-trigger') && !$(event.target).is('.cd-nav-trigger span') ) && navigation.removeClass('nav-is-visible');
+    $(document).on('click', function(event) {
+      if ( !$(event.target).is('.cd-nav-trigger') && !$(event.target).is('.cd-nav-trigger span') ) {
+        navigation.removeClass('nav-is-visible');
+        $('.cd-content').removeClass("blur");
+        blur = true;
+      }
     });
   }
 
@@ -35,6 +38,7 @@ jQuery(document).ready(function($) {
       $('.cd-content').removeClass("blur");
     }
     blur = !blur;
+    navClick = true;
   });
 
   function checkScroll() {
