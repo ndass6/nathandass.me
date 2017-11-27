@@ -734,6 +734,7 @@ section#projects {
   margin: 0;
   position: relative;
   max-width: 370px;
+  padding-bottom: 5px;
 }
 .project-items figure {
   margin: 0;
