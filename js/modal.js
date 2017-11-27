@@ -48,6 +48,13 @@ var ModalEffects = (function() {
 				removeModalHandler();
 			});
 
+			// Close modal when pressing escape
+			$(document).keyup(function(e) {
+			    if (e.keyCode == 27) {
+			        removeModalHandler();
+			    }
+			});
+
 		} );
 
 	}

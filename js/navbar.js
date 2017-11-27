@@ -27,6 +27,17 @@ jQuery(document).ready(function($) {
     });
   }
 
+  // Close menu when pressing escape
+  $(document).keyup(function(e) {
+      if (e.keyCode == 27) {
+        if (navigation.length > 0) {
+          navigation.removeClass('nav-is-visible');
+          $('.cd-content').removeClass("blur");
+          blur = true;
+        }
+      }
+  });
+
   $(window).on('scroll', checkScroll);
   
   navigationItems.on('click', function(event){
