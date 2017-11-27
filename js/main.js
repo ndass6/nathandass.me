@@ -20,15 +20,27 @@ jQuery(function($) {
 			layoutMode : 'fitRows'
 		});
 
+		$year_selectors = $('.year-filter>li>a');
+		$year_selectors.on('click', function(){
+			$year_selectors.removeClass('active');
+			$(this).addClass('active');
+			var year_selector = $('.year-filter>li>a.active').attr('data-filter');
+			var type_selector = $('.type-filter>li>a.active').attr('data-filter');
+			var language_selector = $('.language-filter>li>a.active').attr('data-filter');
+			var area_selector = $('.area-filter>li>a.active').attr('data-filter');
+			$project.isotope({ filter: year_selector + type_selector + language_selector + area_selector });
+			return false;
+		});
+
 		$type_selectors = $('.type-filter>li>a');
 		$type_selectors.on('click', function(){
 			$type_selectors.removeClass('active');
 			$(this).addClass('active');
+			var year_selector = $('.year-filter>li>a.active').attr('data-filter');
 			var type_selector = $('.type-filter>li>a.active').attr('data-filter');
 			var language_selector = $('.language-filter>li>a.active').attr('data-filter');
 			var area_selector = $('.area-filter>li>a.active').attr('data-filter');
-			console.log(type_selector + language_selector + area_selector);
-			$project.isotope({ filter: type_selector + language_selector + area_selector });
+			$project.isotope({ filter: year_selector + type_selector + language_selector + area_selector });
 			return false;
 		});
 
@@ -36,11 +48,12 @@ jQuery(function($) {
 		$language_selectors.on('click', function(){
 			$language_selectors.removeClass('active');
 			$(this).addClass('active');
+			var year_selector = $('.year-filter>li>a.active').attr('data-filter');
 			var type_selector = $('.type-filter>li>a.active').attr('data-filter');
 			var language_selector = $('.language-filter>li>a.active').attr('data-filter');
 			var area_selector = $('.area-filter>li>a.active').attr('data-filter');
 			console.log(type_selector + language_selector + area_selector);
-			$project.isotope({ filter: type_selector + language_selector + area_selector });
+			$project.isotope({ filter: year_selector + type_selector + language_selector + area_selector });
 			return false;
 		});
 
@@ -48,10 +61,11 @@ jQuery(function($) {
 		$area_selectors.on('click', function(){
 			$area_selectors.removeClass('active');
 			$(this).addClass('active');
+			var year_selector = $('.year-filter>li>a.active').attr('data-filter');
 			var type_selector = $('.type-filter>li>a.active').attr('data-filter');
 			var language_selector = $('.language-filter>li>a.active').attr('data-filter');
 			var area_selector = $('.area-filter>li>a.active').attr('data-filter');
-			$project.isotope({ filter: type_selector + language_selector + area_selector });
+			$project.isotope({ filter: year_selector + type_selector + language_selector + area_selector });
 			return false;
 		});
 	});

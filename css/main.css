@@ -757,14 +757,20 @@ section#projects {
 }
 .project-items figcaption h5 {
   position: absolute;
-  bottom: 12px;
+  bottom: 0;
   right: 0;
   left: 0;
   text-align: center;
   margin: 0 auto;
-  word-spacing: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
-.project-items figcaption h5 a {
+.project-items h5 {
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+.project-items h5 a {
   text-align: center;
   padding: 5px 5px;
   border-radius: 2px;
