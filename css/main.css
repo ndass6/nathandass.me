@@ -890,7 +890,7 @@ figure.cs-hover img {
   transform: scale(1);
   opacity: 1;
 }
-.md-content a {
+.md-buttons a, .md-close a {
   text-align: center;
   padding: 5px 5px;
   border-radius: 2px;
