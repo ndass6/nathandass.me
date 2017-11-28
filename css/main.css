@@ -513,36 +513,7 @@ a:focus {
 /********
  * Name *
  ********/
-@media screen and (max-width: 550px) {
-  #name {
-    padding: 25% 0 0 0;
-    background-color: var(--main-color1);
-  }
-}
-@media screen and (min-width: 550px) and (max-width: 768px) {
-  #name {
-    padding: 12.5% 0 0 0;
-    background-color: var(--main-color1);
-  }
-}
-@media screen and (min-width: 768px) {
-  #name {
-    padding: 5% 0 0 0;
-    background-color: var(--main-color1);
-  }
-}
-#logo {
-  color: var(--name-color);
-  left: 50%;
-  top: 50%;
-  position: relative;
-  transform: translate(-50%, -50%);
-}
-
-/**************
- * Name (old) *
- **************/
-/*.name-animation {
+.name-animation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -619,7 +590,7 @@ a:focus {
     width: 25%;
     height: 25%;
   }
-}*/
+}
 
 /********************
  * Section Dividers *
