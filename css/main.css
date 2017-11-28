@@ -823,7 +823,7 @@ figure.cs-hover img {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 50%;
+    width: 0%;
     max-width: 750px;
     height: auto;
     max-height: 90%;
@@ -865,8 +865,17 @@ figure.cs-hover img {
 .md-tags {
   padding-bottom: 5px;
 }
-.md-show {
-  visibility: visible;
+@media screen and (min-width: 768px) {
+  .md-show {
+    width: 50%;
+    visibility: visible;
+  }
+}
+@media screen and (max-width: 768px) {
+  .md-show {
+    width: 90%;
+    visibility: visible;
+  }
 }
 .md-overlay {
   position: fixed;
