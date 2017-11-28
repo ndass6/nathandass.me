@@ -1,21 +1,15 @@
 window.onload = function () {
-    var l = Snap('#logo');
 
     setTimeout( function() {
         var logoTitle = 'Nathan Dass';
         var logoRandom = '';
-        var logoTitleContainer = l.text(0, '98%', '');
+        var logoTitleContainer = $('.name-text')[0];
+        console.log(logoTitleContainer)
         var possible = "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
-        logoTitleContainer.attr({
-            fontSize: 315,
-            fontFamily: 'Open Sans',
-            fontWeight: '600',
-            color: '#ffffff'
-        });
 
         function generateRandomTitle(i, logoRandom) {
             setTimeout( function() {
-                logoTitleContainer.attr({ text: logoRandom });
+                logoTitleContainer.innerHTML = logoRandom;
             }, i*70 );
         }
 

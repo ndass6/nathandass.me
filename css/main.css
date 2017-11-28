@@ -531,12 +531,13 @@ a:focus {
     background-color: var(--main-color1);
   }
 }
-#logo {
-  color: var(--name-color);
-  left: 50%;
+.name-text {
+  font-size: 100px;
+  font-weight: bold;
+  left: 25%;
   top: 50%;
   position: relative;
-  transform: translate(-50%, -50%);
+  /*transform: translate(-20%, -25%);*/
 }
 
 /**************
