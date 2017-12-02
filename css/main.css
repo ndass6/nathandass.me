@@ -513,31 +513,57 @@ a:focus {
 /********
  * Name *
  ********/
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 450px) {
   #name {
-    padding: 25% 0 0 0;
+    padding: 27% 0 0 0;
     background-color: var(--main-color1);
   }
-}
-@media screen and (min-width: 550px) and (max-width: 768px) {
-  #name {
-    padding: 12.5% 0 0 0;
-    background-color: var(--main-color1);
+  .name-text {
+    font-size: 12vw;
+    font-weight: bold;
+    left: 5%;
+    top: 50%;
+    position: relative;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 450px) and (max-width: 768px) {
+  #name {
+    padding: 15% 0 0 0;
+    background-color: var(--main-color1);
+  }
+  .name-text {
+    font-size: 12vw;
+    font-weight: bold;
+    left: 5%;
+    top: 50%;
+    position: relative;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1048px) {
   #name {
     padding: 5% 0 0 0;
     background-color: var(--main-color1);
   }
+  .name-text {
+    font-size: 7vw;
+    font-weight: bold;
+    left: 25%;
+    top: 50%;
+    position: relative;
+  }
 }
-.name-text {
-  font-size: 100px;
-  font-weight: bold;
-  left: 25%;
-  top: 50%;
-  position: relative;
-  /*transform: translate(-20%, -25%);*/
+@media screen and (min-width: 1048px) {
+  #name {
+    padding: 0 0 0 0;
+    background-color: var(--main-color1);
+  }
+  .name-text {
+    font-size: 5vw;
+    font-weight: bold;
+    left: 30%;
+    top: 50%;
+    position: relative;
+  }
 }
 
 /**************
