@@ -835,6 +835,9 @@ section#portfolio {
   color: var(--project-item-button-font-color);
   cursor:pointer;
 }
+.md-trigger {
+  cursor: pointer;
+}
 figure:hover img,
 figure.cs-hover img {
   transform: translateY(-12.5%) scale(0.75);
