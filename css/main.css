@@ -830,7 +830,7 @@ section#portfolio {
 .project-items h5 a {
   text-align: center;
   padding: 5px 5px;
-  border-radius: 2px;
+  border-radius: 3px;
   background: var(--project-item-button-background-color);
   color: var(--project-item-button-font-color);
   cursor:pointer;
@@ -940,7 +940,7 @@ figure.cs-hover img {
   font-weight: 300;
   opacity: 0.8;
   background: rgba(0,0,0,0.1);
-  border-radius: 3px 3px 0 0;
+  border-radius: 3px;
 }
 .md-content > div {
   padding: 15px 40px 30px;
@@ -984,7 +984,7 @@ figure.cs-hover img {
 .md-buttons a, .md-close a {
   text-align: center;
   padding: 5px 5px;
-  border-radius: 2px;
+  border-radius: 3px;
   background: var(--project-item-button-background-color);
   color: var(--project-item-button-font-color);
   cursor:pointer;
