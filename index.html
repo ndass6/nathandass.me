@@ -18,21 +18,6 @@
 
 <body id="page-top">
 
-  <div class="md-modal" id="arteaching-modal">
-    <div class="md-content">
-      <h3>AR for teaching coding concepts</h3>
-      <div>
-        In this research project, I am working with Professor <a href="mailto:polo@gatech.edu">Polo Chau</a> to leverage augmented reality to better teach elementary coding concepts. With augmented reality, we are able to provide a more immersive experience that engages users and allows users to experience better visualizations and feedback. We are investigating the advantages and disadvantages of both the HoloLens and ARKit. We are conducting user studies right now and hope to publish our findings in January 2018.<br><br>
-        I am the lead researcher for this project and have written all of the HoloLens code as well as a majority of the backend infrastructure.
-        <hr>
-        <center class="md-tags">2016-2017, Research, C#/Unity, Augmented Reality, Human-Computer Interaction</center>
-        <!-- <center class="md-buttons">
-        </center> -->
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
   <div class="md-modal" id="architect-modal">
     <div class="md-content">
       <h3>ARchitect</h3>
@@ -67,9 +52,26 @@
     </div>
   </div>
 
+  <div class="md-modal" id="augmented-coding-modal">
+    <div class="md-content">
+      <h3>Augmented Coding</h3>
+      <div>
+        In this research project, I worked with Professor <a href="mailto:polo@gatech.edu">Polo Chau</a> to leverage augmented reality to better teach elementary coding concepts. With augmented reality, we are able to provide a more immersive experience that engages users and allows users to experience better visualizations and feedback. We are investigating the advantages and disadvantages of both the HoloLens and ARKit. We published a poster paper with our results in Chinese CHI 2018.<br><br>
+        I was the lead researcher for this project and wrote written all of the HoloLens code as well as a majority of the backend infrastructure.
+        <hr>
+        <center class="md-tags">2016-2017, Research, C#/Unity, Augmented Reality, Human-Computer Interaction</center>
+        <center class="md-buttons">
+          <a href="files/augmented-coding-paper.pdf" target="_blank">Paper</a>
+          <a href="files/augmented-coding-poster.pdf" target="_blank">Poster</a>
+        </center>
+        <center class="md-close"><a>Close</a></center>
+      </div>
+    </div>
+  </div>
+
   <div class="md-modal" id="understandingtext-modal">
     <div class="md-content">
-      <h3>Better Understanding Textual Documents</h3>
+      <h3>Exploring Text Encoders</h3>
       <div>
         During my second internship at Google, I interned in the Research and Machine Intelligence team in the semantic search group, led by <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil</a>. On a high level, our group works towards adding natural language understanding to any type of search problem. Upon arrival, our most successful model used a combination of <a href="https://en.wikipedia.org/wiki/Bag-of-words_model">bag-of-words</a> for encoding a sequence of text and heirarchical language modeling. While this was a good and fast approach, it lacked knowledge and awareness for longer documents as bag-of-words does not maintain order. My project revolved around finding better ways of understanding textual documents of various lengths, specifically focusing on how to incorporate knowledge of words beyond immediate neighbors. Initially, I approached this by using an LSTM as the sequence encoder instead of bag-of-words. After trying three approaches for obtaining the sequence ecoding from the LSTM (final hidden state, average of the hidden states, and learned weighted sum of the hidden states), I concluded that LSTMs were too slow to justify the increase in accuracy. After that, I shifted to attention and used a network that was released during my internship called the <a href="https://arxiv.org/pdf/1706.03762.pdf">Transformer network</a> that used multi-headed self-attention to allow the network to look at all inputs while not compromising much on speed. Through this approach, I was able to improve our main offline metric of next message prediction by 8% and pushed the team in a very promising approach to the problem we are trying to solve. We are hoping to publish a paper about our findings after getting more results.<br><br>
         I was given a lot of freedom in the direction that I wanted my research to go in. Along with a full-time employee, I was one of the two main people leading the initiative with the Transformer network. With this, we had to fully learn the network and how to integrate it into our existing model. Through this process, I pushed two big code refactors to allow for easier integration and flexibility in choosing sequence encoders.
@@ -644,7 +646,7 @@
                     <img src="images/about.jpg">
                   </div>
                   <div class="carousel-caption">
-                    <p>I graduated from <a href="https://gatech.edu" target="_blank">Georgia Institute of Technology</a> in December 2017, majoring in Computer Science and specializing in Intelligence and People. My goal is to integrate artificial intelligence and human-computer interaction into our everyday lives. I will be working full-time at Google under <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> natural language understanding team starting in January 2018.</p>
+                    <p>I graduated from <a href="https://gatech.edu" target="_blank">Georgia Institute of Technology</a> in December 2017, majoring in Computer Science and specializing in Intelligence and People. My goal is to integrate artificial intelligence and human-computer interaction into our everyday lives. I am currently working full-time at Google on <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> natural language understanding team where I am working on Smart Reply, improving Ads matching, and the next generation Google Assistant.</p>
                   </div>
                 </div>
                 <div class="carousel-content">
@@ -660,7 +662,7 @@
                     <img src="images/google.jpg">
                   </div>
                   <div class="carousel-caption">
-                    <p>During the summer of 2017, I am worked at the research and machine intelligence team at Google. I worked on better understanding text with the goal of applying the knowledge to language generation, finding relevant webpages, and text summarization.</p>
+                    <p>During the summer of 2017, I am worked at the research and machine intelligence team at Google. I worked on better understanding text encoders with the goal of applying the knowledge to language generation, finding relevant webpages, and text summarization.</p>
                   </div>
                 </div>
                 <div class="carousel-content">
@@ -744,7 +746,7 @@
                 <i class="fa fa-google icon-md icon-color3"></i>
                 <h4>Software Engineer</h4>
                 <h4>Google</h4>
-                <p>I will be working full-time at Google under <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> natural language understanding team starting in January 2018.</p>
+                <p>I am currently working full-time at Google on <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> natural language understanding team where I am working on Smart Reply, improving Ads matching, and the next generation Google Assistant.</p>
               </div>
             </div><!--/.col-md-4-->
             <div class="col-md-4">
@@ -752,7 +754,7 @@
                 <i class="fa fa-google icon-md icon-color7"></i>
                 <h4>Software Engineering Intern</h4>
                 <h4>Google</h4>
-                <p>During the summer of 2017, I worked at the research and machine intelligence team at Google. I worked on better understanding text with the goal of applying the knowledge to language generation, finding relevant webpages, and text summarization.</p>
+                <p>During the summer of 2017, I worked at the research and machine intelligence team at Google on <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> natural language understanding team. I worked on better understanding text encoders with the goal of applying the knowledge to language generation, finding relevant webpages, and text summarization.</p>
               </div>
             </div><!--/.col-md-4-->
             <div class="col-md-4">
@@ -760,7 +762,7 @@
                 <i class="fa fa-code icon-md icon-color9"></i>
                 <h4>Co-Founder</h4>
                 <h4>InternBlitz</h4>
-                <p>I competed at Georgia Tech's InVenture Prize based on this project which focused on making it easier for students to find and apply to internships. We won 2nd place at <a href="https://inventureprize.gatech.edu/" target="_blank">Georgia Tech's InVenture Prize</a>.</p>
+                <p>I competed at Georgia Tech's InVenture Prize with this project, which focused on making it easier for students to find and apply to internships. We won 2nd place at <a href="https://inventureprize.gatech.edu/" target="_blank">Georgia Tech's InVenture Prize</a>.</p>
               </div>
             </div><!--/.col-md-4-->
           </div><!--/.row-->
@@ -848,10 +850,11 @@
             <div class="col-md-4">
               <div class="center grow">
                 <i class="fa fa-code icon-md icon-color3"></i>
-                <h3>AR for teaching coding concepts</h3>
+                <h3>Augmented coding</h3>
                 <h5>Georgia Tech Research Assistant</h5>
-                <h5>October 2016 - Present</h5>
-                <p>I am currently a research assistant under Professor <a href="mailto:polo@gatech.edu">Polo Chau</a>. The goal of this project is to investigate and develop methods of exposing little kids to coding concepts through augmented reality. We are using the 3D augmented environment in the HoloLens and ARKit to make it easier for kids to obtain a solid foundation of high level concepts that can then be related to coding.</p>
+                <h5>October 2016 - March 2018</h5>
+                <p>I was a research assistant under Professor <a href="mailto:polo@gatech.edu">Polo Chau</a>. The goal of this project was to investigate and develop methods of exposing little kids to coding concepts through augmented reality. We used the 3D augmented environment in the HoloLens and ARKit to make it easier for kids to obtain a solid foundation of high level concepts that can then be related to coding.</p>
+                <strong><p><a href="files/augmented-coding-paper.pdf" target="_blank">Chinese CHI 2018 Paper</a>, <a href="files/augmented-coding-poster.pdf" target="_blank">Chinese CHI 2018 Poster</a></p></strong>
               </div>
             </div><!--/.col-md-4-->
           </div><!--/.row-->
@@ -861,8 +864,8 @@
                 <i class="fa fa-commenting icon-md icon-color2"></i>
                 <h3>Scheherazade 2.0</h3>
                 <h5>Georgia Tech Research Assistant</h5>
-                <h5>May 2016 - Present</h5>
-                <p>I am currently a research assistant under Professor <a href="mailto:riedl@cc.gatech.edu">Mark Riedl</a>. The goal of this project is to create deep reinforcement learning architectures and algorithms with TensorFlow in order to create conversational chat bots.</p>
+                <h5>May 2016 - December 2017</h5>
+                <p>I was a research assistant under Professor <a href="mailto:riedl@cc.gatech.edu">Mark Riedl</a>. The goal of this project is to create deep reinforcement learning architectures and algorithms with TensorFlow in order to create conversational chat bots.</p>
                 <strong><p><a href="files/scheherezade-paper.pdf" target="_blank">NIPS 2017 Paper</a>, <a href="files/scheherezade-poster.pdf" target="_blank">Poster</a></p></strong>
               </div>
             </div><!--/.col-md-4-->
@@ -872,7 +875,7 @@
                 <h3>NaturalMotion: Intuitive Gesture Control and Visualization of Time-Evolving Graphs</h3>
                 <h5>Georgia Tech Research Assistant</h5>
                 <h5>September 2014 - September 2016</h5>
-                <p>The goal of this project is to use the Leap Motion to detect hand gestures and manipulate a 3D cube that represents a large data set and is displayed in a virtual environment using the Oculus Rift. Instead of looking at the raw data set, this project provides an innovative solution to data visualization. We published a poster paper for this project, which was accepted to VIS 2016. We also recieved a grant from the Wearable Computer Center Engagement Grant for this project.</p>
+                <p>I was a research assistant under Professor <a href="mailto:polo@gatech.edu">Polo Chau</a>.The goal of this project is to use the Leap Motion to detect hand gestures and manipulate a 3D cube that represents a large data set and is displayed in a virtual environment using the Oculus Rift. Instead of looking at the raw data set, this project provides an innovative solution to data visualization. We published a poster paper for this project in VIS 2016. We also recieved a grant from the Wearable Computer Center Engagement Grant for this project.</p>
                 <strong><p><a href="files/naturalmotion-poster.pdf" target="_blank">VIS 2016 Poster</a>, <a href="files/naturalmotion-paper.pdf" target="_blank">VIS 2016 Paper</a></p></strong>
               </div>
             </div><!--/.col-md-4-->
@@ -950,6 +953,7 @@
           <ul class="project-filter year-filter">
             <li>Year:</li>
             <li><a class="btn btn-primary active" data-filter=".year">All</a></li>
+            <li><a class="btn btn-primary" data-filter=".2018">2018</a></li>
             <li><a class="btn btn-primary" data-filter=".2017">2017</a></li>
             <li><a class="btn btn-primary" data-filter=".2016">2016</a></li>
             <li><a class="btn btn-primary" data-filter=".2015">2015</a></li>
@@ -1021,12 +1025,29 @@
               </h5>
             </li>
 
-            <li class="project-item year type lang area 2017 research ar hci col-xs-12 col-sm-6 col-md-4">
+            <li class="project-item year type lang area 2016 2017 2018 research unity ar hci col-xs-12 col-sm-6 col-md-4">
+              <figure>
+                <a class="md-trigger" data-modal="augmented-coding-modal" target=""><img src="images/projects/augmentedcoding.jpg"></a>
+                <figcaption>
+                  <h5>
+                    2016-2018, Research, C#/Unity, Augmented Reality, Human-Computer Interaction
+                  </h5>
+                </figcaption>
+              </figure>
+              <p>Augmented coding</p>
+              <h5 class = "project-buttons">
+                <a class="md-trigger" data-modal="augmented-coding-modal" target="">Details</a>
+                <a href="files/augmented-coding-paper.pdf" target="_blank">Paper</a>
+                <a href="files/augmented-coding-poster.pdf" target="_blank">Poster</a>
+              </h5>
+            </li>
+
+            <li class="project-item year type lang area 2017 2018 research ar hci col-xs-12 col-sm-6 col-md-4">
               <figure>
                 <a class="md-trigger" data-modal="hmd-modal" target=""><img src="images/projects/hmd.png"></a>
                 <figcaption>
                   <h5>
-                    2017, Research, Augmented Reality, Human-Computer Interaction
+                    2017-2018, Research, Augmented Reality, Human-Computer Interaction
                   </h5>
                 </figcaption>
               </figure>
@@ -1036,12 +1057,12 @@
               </h5>
             </li>
 
-            <li class="project-item year type lang area 2016 2017 research unity ar hci col-xs-12 col-sm-6 col-md-4">
+            <li class="project-item year type lang area 2016 2017 2018 research unity ar hci col-xs-12 col-sm-6 col-md-4">
               <figure>
                 <a class="md-trigger" data-modal="art2-modal" target=""><img src="images/projects/art2.jpg"></a>
                 <figcaption>
                   <h5>
-                    2016-2017, Research, C#/Unity, Augmented Reality, Human-Computer Interaction
+                    2016-2018, Research, C#/Unity, Augmented Reality, Human-Computer Interaction
                   </h5>
                 </figcaption>
               </figure>
@@ -1049,21 +1070,6 @@
               <h5 class = "project-buttons">
                 <a href="files/art2-video.mp4" target="_blank">Video</a>
                 <a class="md-trigger" data-modal="art2-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2016 2017 research unity ar hci col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="arteaching-modal" target=""><img src="images/projects/arteaching.jpg"></a>
-                <figcaption>
-                  <h5>
-                    2016-2017, Research, C#/Unity, Augmented Reality, Human-Computer Interaction
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>AR for teaching coding concepts</p>
-              <h5 class = "project-buttons">
-                <a class="md-trigger" data-modal="arteaching-modal" target="">Details</a>
               </h5>
             </li>
 
@@ -1076,7 +1082,7 @@
                   </h5>
                 </figcaption>
               </figure>
-              <p>Better Understanding Textual Documents</p>
+              <p>Exploring Text Encoders</p>
               <h5 class = "project-buttons">
                 <a class="md-trigger" data-modal="understandingtext-modal" target="">Details</a>
               </h5>
