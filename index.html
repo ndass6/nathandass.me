@@ -73,7 +73,7 @@
     <div class="md-content">
       <h3>Exploring Text Encoders</h3>
       <div>
-        During my second internship at Google, I interned in the Research and Machine Intelligence team in the semantic search group, led by <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil</a>. On a high level, our group works towards adding natural language understanding to any type of search problem. Upon arrival, our most successful model used a combination of <a href="https://en.wikipedia.org/wiki/Bag-of-words_model">bag-of-words</a> for encoding a sequence of text and heirarchical language modeling. While this was a good and fast approach, it lacked knowledge and awareness for longer documents as bag-of-words does not maintain order. My project revolved around finding better ways of understanding textual documents of various lengths, specifically focusing on how to incorporate knowledge of words beyond immediate neighbors. Initially, I approached this by using an LSTM as the sequence encoder instead of bag-of-words. After trying three approaches for obtaining the sequence ecoding from the LSTM (final hidden state, average of the hidden states, and learned weighted sum of the hidden states), I concluded that LSTMs were too slow to justify the increase in accuracy. After that, I shifted to attention and used a network that was released during my internship called the <a href="https://arxiv.org/pdf/1706.03762.pdf">Transformer network</a> that used multi-headed self-attention to allow the network to look at all inputs while not compromising much on speed. Through this approach, I was able to improve our main offline metric of next message prediction by 8% and pushed the team in a very promising approach to the problem we are trying to solve. We are hoping to publish a paper about our findings after getting more results.<br><br>
+        During my second internship at Google, I interned in the Research and Machine Intelligence team in the semantic search group, led by <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil</a>. On a high level, our group works towards adding Natural Language Understanding to any type of search problem. Upon arrival, our most successful model used a combination of <a href="https://en.wikipedia.org/wiki/Bag-of-words_model">bag-of-words</a> for encoding a sequence of text and heirarchical language modeling. While this was a good and fast approach, it lacked knowledge and awareness for longer documents as bag-of-words does not maintain order. My project revolved around finding better ways of understanding textual documents of various lengths, specifically focusing on how to incorporate knowledge of words beyond immediate neighbors. Initially, I approached this by using an LSTM as the sequence encoder instead of bag-of-words. After trying three approaches for obtaining the sequence ecoding from the LSTM (final hidden state, average of the hidden states, and learned weighted sum of the hidden states), I concluded that LSTMs were too slow to justify the increase in accuracy. After that, I shifted to attention and used a network that was released during my internship called the <a href="https://arxiv.org/pdf/1706.03762.pdf">Transformer network</a> that used multi-headed self-attention to allow the network to look at all inputs while not compromising much on speed. Through this approach, I was able to improve our main offline metric of next message prediction by 8% and pushed the team in a very promising approach to the problem we are trying to solve. We are hoping to publish a paper about our findings after getting more results.<br><br>
         I was given a lot of freedom in the direction that I wanted my research to go in. Along with a full-time employee, I was one of the two main people leading the initiative with the Transformer network. With this, we had to fully learn the network and how to integrate it into our existing model. Through this process, I pushed two big code refactors to allow for easier integration and flexibility in choosing sequence encoders.
         <hr>
         <center class="md-tags">2017, Work, Research, Python, Natural Language Processing</center>
@@ -646,7 +646,7 @@
                     <img src="images/about.jpg">
                   </div>
                   <div class="carousel-caption">
-                    <p>I graduated from <a href="https://gatech.edu" target="_blank">Georgia Institute of Technology</a> in December 2017, majoring in Computer Science and specializing in Intelligence and People. My goal is to integrate artificial intelligence and human-computer interaction into our everyday lives. I am currently working full-time at Google on <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> natural language understanding team where I am working on Smart Reply, improving Ads matching, and the next generation Google Assistant.</p>
+                    <p>I graduated from <a href="https://gatech.edu" target="_blank">Georgia Institute of Technology</a> in December 2017, majoring in Computer Science and specializing in Intelligence and People. My goal is to integrate artificial intelligence and human-computer interaction into our everyday lives. I am currently working full-time at Google in <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> Natural Language Understanding team where I am working on Smart Reply, improving Ads matching, and the next generation Google Assistant.</p>
                   </div>
                 </div>
                 <div class="carousel-content">
@@ -662,7 +662,7 @@
                     <img src="images/google.jpg">
                   </div>
                   <div class="carousel-caption">
-                    <p>During the summer of 2017, I am worked at the research and machine intelligence team at Google. I worked on better understanding text encoders with the goal of applying the knowledge to language generation, finding relevant webpages, and text summarization.</p>
+                    <p>During the summer of 2017, I am worked at the research and machine intelligence team at Google. I worked on understanding text encoders in order to apply the knowledge to language generation, finding relevant webpages, and text summarization.</p>
                   </div>
                 </div>
                 <div class="carousel-content">
@@ -746,7 +746,7 @@
                 <i class="fa fa-google icon-md icon-color3"></i>
                 <h4>Software Engineer</h4>
                 <h4>Google</h4>
-                <p>I am currently working full-time at Google on <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> natural language understanding team where I am working on Smart Reply, improving Ads matching, and the next generation Google Assistant.</p>
+                <p>I am currently working full-time at Google in <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> Natural Language Understanding team where I am working on Smart Reply, improving Ads matching, and the next generation Google Assistant.</p>
               </div>
             </div><!--/.col-md-4-->
             <div class="col-md-4">
@@ -754,7 +754,7 @@
                 <i class="fa fa-google icon-md icon-color7"></i>
                 <h4>Software Engineering Intern</h4>
                 <h4>Google</h4>
-                <p>During the summer of 2017, I worked at the research and machine intelligence team at Google on <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> natural language understanding team. I worked on better understanding text encoders with the goal of applying the knowledge to language generation, finding relevant webpages, and text summarization.</p>
+                <p>During the summer of 2017, I worked at the research and machine intelligence team at Google in <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> Natural Language Understanding team. I worked on understanding text encoders in order to apply the knowledge to language generation, finding relevant webpages, and text summarization.</p>
               </div>
             </div><!--/.col-md-4-->
             <div class="col-md-4">
