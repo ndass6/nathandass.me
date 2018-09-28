@@ -22,7 +22,7 @@
     <div class="md-content">
       <h3>ARchitect</h3>
       <div>
-        ARchitect was a hackathon project for <a href="https://holohack.devpost.com/">HoloHack</a> 2016. ARchitect is a room planning application for the future. It allows you to place holograms of furniture in any room and actually see what the room would look like if the furniture was actually there, which saves users time and money.<br><br>
+        ARchitect was a hackathon project for <a href="https://holohack.devpost.com/" target="_blank">HoloHack</a> 2016. ARchitect is a room planning application for the future. It allows you to place holograms of furniture in any room and actually see what the room would look like if the furniture was actually there, which saves users time and money.<br><br>
         I did the HoloLens side of the application and worked on the backend as well in order to link the HoloLens gesture detection code to the frontend of the application.
         <hr>
         <center class="md-tags">2016, Personal, C#/Unity, Augmented Reality, Human Computer Interaction</center>
@@ -69,11 +69,11 @@
     </div>
   </div>
 
-  <div class="md-modal" id="understandingtext-modal">
+  <div class="md-modal" id="improvingtext-modal">
     <div class="md-content">
-      <h3>Exploring Text Encoders</h3>
+      <h3>Improving Text Encoders</h3>
       <div>
-        During my second internship at Google, I interned in the Research and Machine Intelligence team in the semantic search group, led by <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil</a>. On a high level, our group works towards adding Natural Language Understanding to any type of search problem. Upon arrival, our most successful model used a combination of <a href="https://en.wikipedia.org/wiki/Bag-of-words_model">bag-of-words</a> for encoding a sequence of text and heirarchical language modeling. While this was a good and fast approach, it lacked knowledge and awareness for longer documents as bag-of-words does not maintain order. My project revolved around finding better ways of understanding textual documents of various lengths, specifically focusing on how to incorporate knowledge of words beyond immediate neighbors. Initially, I approached this by using an LSTM as the sequence encoder instead of bag-of-words. After trying three approaches for obtaining the sequence ecoding from the LSTM (final hidden state, average of the hidden states, and learned weighted sum of the hidden states), I concluded that LSTMs were too slow to justify the increase in accuracy. After that, I shifted to attention and used a network that was released during my internship called the <a href="https://arxiv.org/pdf/1706.03762.pdf">Transformer network</a> that used multi-headed self-attention to allow the network to look at all inputs while not compromising much on speed. Through this approach, I was able to improve our main offline metric of next message prediction by 8% and pushed the team in a very promising approach to the problem we are trying to solve. We are hoping to publish a paper about our findings after getting more results.<br><br>
+        During my second internship at Google, I interned in the Research and Machine Intelligence team in the semantic search group, led by <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil" target="_blank">Ray Kurzweil</a>. On a high level, our group works towards adding natural language understanding to any type of search problem. Upon arrival, our most successful model used a combination of <a href="https://en.wikipedia.org/wiki/Bag-of-words_model" target="_blank">bag-of-words</a> for encoding a sequence of text and heirarchical language modeling. While this was a good and fast approach, it lacked knowledge and awareness for longer documents as bag-of-words does not maintain order. My project revolved around finding better ways of understanding textual documents of various lengths, specifically focusing on how to incorporate knowledge of words beyond immediate neighbors. Initially, I approached this by using an LSTM as the sequence encoder instead of bag-of-words. After trying different approaches for obtaining the sequence ecoding from the LSTM, I concluded that LSTMs were too slow to justify the slight increase in accuracy. After that, I started an encoder that was part of a network released during my internship called the <a href="https://arxiv.org/pdf/1706.03762.pdf" target="_blank">Transformer network</a> that used multi-headed self-attention to allow the model to look at all inputs while not compromising too much on speed. Through this approach, I was able to improve our main offline metric of next message prediction by 8% and pushed the team in a very promising approach to the problem we are trying to solve.<br><br>
         I was given a lot of freedom in the direction that I wanted my research to go in. Along with a full-time employee, I was one of the two main people leading the initiative with the Transformer network. With this, we had to fully learn the network and how to integrate it into our existing model. Through this process, I pushed two big code refactors to allow for easier integration and flexibility in choosing sequence encoders.
         <hr>
         <center class="md-tags">2017, Work, Research, Python, Natural Language Processing</center>
@@ -103,7 +103,7 @@
     <div class="md-content">
       <h3>LogoLens</h3>
       <div>
-        LogoLens was a hackathon project <a href="https://hackmit.org/">HackMIT</a> 2016. LogoLens presents relevant stock quote data when a user sees a company logo in the surrounding environment. This encourages users to invest in stocks, grow their personal investments, and raises awareness about the stock market in general. We won the NASDAQ API prize at HackMIT and demoed the application to NASDAQ executives in January 2017.<br><br>
+        LogoLens was a hackathon project <a href="https://hackmit.org/" target="_blank">HackMIT</a> 2016. LogoLens presents relevant stock quote data when a user sees a company logo in the surrounding environment. This encourages users to invest in stocks, grow their personal investments, and raises awareness about the stock market in general. We won the NASDAQ API prize at HackMIT and demoed the application to NASDAQ executives in January 2017.<br><br>
         I led the HoloLens development and worked on the UI and integration with the NASDAQ API and Google Cloud Vision API. In the process, I developed an algorithm to take a picture in a HoloLens application before it was officially supported.
         <hr>
         <center class="md-tags">2016, Personal, C#/Unity, Augmented Reality, Human-Computer Interaction</center>
@@ -187,7 +187,7 @@
     <div class="md-content">
       <h3>Speechgram</h3>
       <div>
-        Speechgram was a project coded for the <a href="https://imagine.microsoft.com/en-us/Compete"> Microsoft Imagine Cup</a>. Speechgram bridges the communication gap for users with hearing disabilities so that they can have conversations in everyday life. When having a conversation, Speechgram translates displays the conversation to the user through speech into text. It then allows the user to select one of many predefined responses, which is automatically spoken out loud through text to speech. We also use speaker recognition to identify each speaker in a group of speakers and tags each chat message with the appropriate speaker's name.<br><br>
+        Speechgram was a project coded for the <a href="https://imagine.microsoft.com/en-us/Compete" target="_blank"> Microsoft Imagine Cup</a>. Speechgram bridges the communication gap for users with hearing disabilities so that they can have conversations in everyday life. When having a conversation, Speechgram translates displays the conversation to the user through speech into text. It then allows the user to select one of many predefined responses, which is automatically spoken out loud through text to speech. We also use speaker recognition to identify each speaker in a group of speakers and tags each chat message with the appropriate speaker's name.<br><br>
         I wrote all HoloLens code in the application, worked on integrating the various Microsoft Azure APIs that we were using, and helped hook up the backend and frontend.
         <hr>
         <center class="md-tags">2017, Personal, C#/Unity, Augmented Reality, Human-Computer Interaction</center>
@@ -201,7 +201,7 @@
 
   <div class="md-modal" id="tsm-modal">
     <div class="md-content">
-      <h3>Target Strength Modeling Renderer Modernization in Java</h3>
+      <h3>Target Strength Modeling Renderer Modernization</h3>
       <div>
         I designed and implemented an interface to render and edit submarines parts in real time and manipulate the respective data fields of each part. My code is currently being used in the Navy to accurately build models of the submarines, replacing the Fortran code that was previously used.<br><br>
         I was the only developer working on this project. I was given an initial version of a framework that a previous intern had written, but I built out the remaining parts of the framework, created a new version of the UI, and integrated everything together all while making sure it was compatible with the input and output types.
@@ -646,7 +646,7 @@
                     <img src="images/about.jpg">
                   </div>
                   <div class="carousel-caption">
-                    <p>I graduated from <a href="https://gatech.edu" target="_blank">Georgia Institute of Technology</a> in December 2017, majoring in Computer Science and specializing in Intelligence and People. My goal is to integrate artificial intelligence and human-computer interaction into our everyday lives. I am currently working full-time at Google in <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> Natural Language Understanding team where I am working on Smart Reply, improving Ads matching, and the next generation Google Assistant.</p>
+                    <p>I graduated from <a href="https://gatech.edu" target="_blank">Georgia Institute of Technology</a> in December 2017, majoring in Computer Science and specializing in Intelligence and People. My goal is to integrate artificial intelligence and human-computer interaction into our everyday lives. I am currently working currently pursuing an MS in Computer Science at Stanford University with a concentration in Artificial Intelligence while working part-time at <a href="https://ai.google/" target="_blank">Google AI</a> in <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil" target="_blank">Ray Kurzweil's</a> natural language understanding team where I am working on improving the ads relevance scoring system.</p>
                   </div>
                 </div>
                 <div class="carousel-content">
@@ -654,7 +654,7 @@
                     <img src="images/sga.jpg">
                   </div>
                   <div class="carousel-caption">
-                    <p>I was the Joint Vice President of Information Technology for <a href="sga.gatech.edu">Student Government Association at Georgia Tech</a>. I work closely with administrators, lead the 20+ person IT Board, and work on large impact campus-wide projects, such as working on a partnership between Georgia Tech Housing and Amazon to give each dorm and apartment on campus an Amazon Echo Dot and an Amazon Firestick, and allocating $3.5 million to tech-related projects for all colleges, schools, and departments on campus.</p>
+                    <p>I was the Joint Vice President of Information Technology for <a href="sga.gatech.edu" target="_blank">Student Government Association at Georgia Tech</a>. I work closely with administrators, lead the 20+ person IT Board, and work on large impact campus-wide projects, such as working on a partnership between Georgia Tech Housing and Amazon to give each dorm and apartment on campus an Amazon Echo Dot and an Amazon Firestick, and allocating $3.5 million to tech-related projects for all colleges, schools, and departments on campus.</p>
                   </div>
                 </div>
                 <div class="carousel-content">
@@ -662,7 +662,7 @@
                     <img src="images/google.jpg">
                   </div>
                   <div class="carousel-caption">
-                    <p>During the summer of 2017, I am worked at the research and machine intelligence team at Google. I worked on understanding text encoders in order to apply the knowledge to language generation, finding relevant webpages, and text summarization.</p>
+                    <p>During the summer of 2017, I am worked at the research and machine intelligence team at Google. I worked on using new text encoders to give overall modeling improvements to suggesting responses, answering questions, finding relevant webpages, and summarizing text.</p>
                   </div>
                 </div>
                 <div class="carousel-content">
@@ -746,7 +746,7 @@
                 <i class="fa fa-google icon-md icon-color3"></i>
                 <h4>Software Engineer</h4>
                 <h4>Google</h4>
-                <p>I am currently working full-time at Google in <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> Natural Language Understanding team where I am working on Smart Reply, improving Ads matching, and the next generation Google Assistant.</p>
+                <p>I am currently working part-time at Google in <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> Natural Language Understanding team where I am working on improving the ads relevance scoring system. From January 2018 to September 2018, I was working full-time in this group where I launched server and on-device models for smart reply in Android Messages (~25M+ DAU) and worked on the next generation Google Assistant.</p>
               </div>
             </div><!--/.col-md-4-->
             <div class="col-md-4">
@@ -754,7 +754,7 @@
                 <i class="fa fa-google icon-md icon-color7"></i>
                 <h4>Software Engineering Intern</h4>
                 <h4>Google</h4>
-                <p>During the summer of 2017, I worked at the research and machine intelligence team at Google in <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> Natural Language Understanding team. I worked on understanding text encoders in order to apply the knowledge to language generation, finding relevant webpages, and text summarization.</p>
+                <p>During the summer of 2017, I worked at Google's Research and Machine Intelligence team in <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil">Ray Kurzweil's</a> Natural Language Understanding group. I worked on using new text encoders to give overall modeling improvements to suggesting responses, answering questions, finding relevant webpages, and summarizing text.</p>
               </div>
             </div><!--/.col-md-4-->
             <div class="col-md-4">
@@ -897,6 +897,25 @@
           <div class="center">
             <h2>Education</h2>
           </div><!--/.center-->
+          <div class="row" data-aos="zoom-in-up">
+            <div class="col-sm-4">
+              <img class="img-responsive img-thumbnail img-circle" src="images/stanford.png" alt="" >
+            </div><!--/.col-sm-4-->
+            <div class="col-sm-6">
+              <h1><a href="https://www.stanford.edu" target="_blank">Stanford University</a></h1>
+              <div class="row">
+                <div class="col-md-10">
+                  <h4>
+                    <strong>Major:</strong> Computer Science<br>
+                    <strong>Concentration:</strong> Artificial Intelligence<br>
+                    <strong>Expected Graduation:</strong> August 2019<br>
+                    <!-- <strong>GPA:</strong> 3.86/4.0<br><br> -->
+                    <strong>Current CS courses:</strong> Artificial Intelligence, Machine Learning, Deep Learning
+                  </h4>
+                </div>
+              </div>
+            </div><!--/.col-sm-6-->
+          </div><!--/.row-->
           <div class="row" data-aos="zoom-in-up">
             <div class="col-sm-4">
               <img class="img-responsive img-thumbnail img-circle" src="images/gt.png" alt="" >
@@ -1082,9 +1101,9 @@
                   </h5>
                 </figcaption>
               </figure>
-              <p>Exploring Text Encoders</p>
+              <p>Improving Text Encoders</p>
               <h5 class = "project-buttons">
-                <a class="md-trigger" data-modal="understandingtext-modal" target="">Details</a>
+                <a class="md-trigger" data-modal="improvingtext-modal" target="">Details</a>
               </h5>
             </li>
 
@@ -1180,7 +1199,7 @@
                   </h5>
                 </figcaption>
               </figure>
-              <p>Target Strength Modeling Renderer Modernization in Java</p>
+              <p>Target Strength Modeling Renderer Modernization</p>
               <h5 class="project-buttons">
                 <a class="md-trigger" data-modal="tsm-modal" target="">Details</a>
               </h5>
@@ -1752,7 +1771,7 @@
               <div class="center grow">
                 <i class="fa fa-trophy icon-md icon-color7"></i>
                 <h4>Sports</h4>
-                <p>I have always enjoyed watching and playing sports. I play basketball and table tennis whenever I get the chance and have been playing them since I was a kid. I love watching football and make sure to follow every game in the playoffs leading up to the Super Bowl. I also really enjoy watching the Olympics and have recently started watching soccer after seeing the World Cup in 2014.</p>
+                <p>I have always enjoyed watching and playing sports. Recently, I have started playing a lot of foosball. My favorite shot is the <a href="files/pull-kick.mp4" target="_blank">pull-kick</a>, but I am best known for my <a href="files/pull.mp4" target="_blank">pull shot</a>. I have also been working on my <a href="files/snake.mp4" target="_blank">snake shot</a>, but still need to improve it a lot. I also play basketball and table tennis whenever I get the chance and have been playing them since I was a kid. I love watching football and make sure to follow every game in the playoffs leading up to the Super Bowl. I also really enjoy watching the Olympics and have recently started watching soccer after the 2014 World Cup.</p>
               </div>
             </div><!--/.col-md-4-->
             <div class="col-md-4" data-aos="zoom-in-up">
