@@ -69,16 +69,61 @@
     </div>
   </div>
 
-  <div class="md-modal" id="improvingtext-modal">
+  <div class="md-modal" id="brick-modal">
     <div class="md-content">
-      <h3>Improving Text Encoders</h3>
+      <h3>Brick Breaker</h3>
       <div>
-        During my second internship at Google, I interned in the Research and Machine Intelligence team in the semantic search group, led by <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil" target="_blank">Ray Kurzweil</a>. On a high level, our group works towards adding natural language understanding to any type of search problem. Upon arrival, our most successful model used a combination of <a href="https://en.wikipedia.org/wiki/Bag-of-words_model" target="_blank">bag-of-words</a> for encoding a sequence of text and heirarchical language modeling. While this was a good and fast approach, it lacked knowledge and awareness for longer documents as bag-of-words does not maintain order. My project revolved around finding better ways of understanding textual documents of various lengths, specifically focusing on how to incorporate knowledge of words beyond immediate neighbors. Initially, I approached this by using an LSTM as the sequence encoder instead of bag-of-words. After trying different approaches for obtaining the sequence ecoding from the LSTM, I concluded that LSTMs were too slow to justify the slight increase in accuracy. After that, I started an encoder that was part of a network released during my internship called the <a href="https://arxiv.org/pdf/1706.03762.pdf" target="_blank">Transformer network</a> that used multi-headed self-attention to allow the model to look at all inputs while not compromising too much on speed. Through this approach, I was able to improve our main offline metric of next message prediction by 8% and pushed the team in a very promising approach to the problem we are trying to solve.<br><br>
-        I was given a lot of freedom in the direction that I wanted my research to go in. Along with a full-time employee, I was one of the two main people leading the initiative with the Transformer network. With this, we had to fully learn the network and how to integrate it into our existing model. Through this process, I pushed two big code refactors to allow for easier integration and flexibility in choosing sequence encoders.
+        Brick Breaker for a GBA emulator. After using "make vba", you can start playing the game by hitting the start button (Enter). To play the game, use the arrow keys to move your paddle. You get to the next level by hitting all of the bricks with the ball. Upon finishing all of the levels, you can restart the game by hitting the start button (Enter) or you can restart the game at any time by hitting the select button (Backspace). There are animations for finishing a level, losing a life, and winning the game.
         <hr>
-        <center class="md-tags">2017, Work, Research, Python, Natural Language Processing</center>
-        <!-- <center class="md-buttons">
-        </center> -->
+        <center class="md-tags">2015, Class, C</center>
+        <center class="md-buttons">
+          <a href="https://github.com/ndass6/Brick-Breaker" target="_blank">GitHub</a>
+        </center>
+        <center class="md-close"><a>Close</a></center>
+      </div>
+    </div>
+  </div>
+
+  <div class="md-modal" id="coref-modal">
+    <div class="md-content">
+      <h3>Coreference Resolution</h3>
+      <div>
+        Implemented rule-based and machine learning coreference resolution.
+        <hr>
+        <center class="md-tags">2017, Class, Python, Natural Language Processing</center>
+        <center class="md-buttons">
+          <a href="https://github.com/ndass6/Coreference-Resolution" target="_blank">GitHub</a>
+        </center>
+        <center class="md-close"><a>Close</a></center>
+      </div>
+    </div>
+  </div>
+
+  <div class="md-modal" id="dtdp-modal">
+    <div class="md-content">
+      <h3>Deep Transition Dependency Parser</h3>
+      <div>
+        Implemented deep transition dependency parser in PyTorch.
+        <hr>
+        <center class="md-tags">2017, Class, Python, Natural Language Processing</center>
+        <center class="md-buttons">
+          <a href="https://github.com/ndass6/Deep-Transition-Dependency-Parser" target="_blank">GitHub</a>
+        </center>
+        <center class="md-close"><a>Close</a></center>
+      </div>
+    </div>
+  </div>
+
+  <div class="md-modal" id="galaga-modal">
+    <div class="md-content">
+      <h3>Galaga</h3>
+      <div>
+        Galaga for a GBA emulator. After using "make vba", you can start playing the game by hitting the start button (Enter). To play the game, use the arrow keys and press A (Z) to fire a laser. You get to the next level by shooting all of the enemies while you lose a life if you collide with an enemy. Upon finishing all of the levels, you can restart the game by hitting the start button (Enter) or you can restart the game at any time by hitting the select button (Backspace).
+        <hr>
+        <center class="md-tags">2015, Class, C</center>
+        <center class="md-buttons">
+          <a href="https://github.com/ndass6/Galaga" target="_blank">GitHub</a>
+        </center>
         <center class="md-close"><a>Close</a></center>
       </div>
     </div>
@@ -92,6 +137,21 @@
         I am the lead researcher for this project since it started and have designed our experimental design and wrote the code for the website that we use in our experiments.
         <hr>
         <center class="md-tags">2017, Research, Augmented Reality, Human-Computer Interaction</center>
+        <!-- <center class="md-buttons">
+        </center> -->
+        <center class="md-close"><a>Close</a></center>
+      </div>
+    </div>
+  </div>
+
+  <div class="md-modal" id="improvingtext-modal">
+    <div class="md-content">
+      <h3>Improving Text Encoders</h3>
+      <div>
+        During my second internship at Google, I interned in the Research and Machine Intelligence team in the semantic search group, led by <a href="https://en.wikipedia.org/wiki/Ray_Kurzweil" target="_blank">Ray Kurzweil</a>. On a high level, our group works towards adding natural language understanding to any type of search problem. Upon arrival, our most successful model used a combination of <a href="https://en.wikipedia.org/wiki/Bag-of-words_model" target="_blank">bag-of-words</a> for encoding a sequence of text and heirarchical language modeling. While this was a good and fast approach, it lacked knowledge and awareness for longer documents as bag-of-words does not maintain order. My project revolved around finding better ways of understanding textual documents of various lengths, specifically focusing on how to incorporate knowledge of words beyond immediate neighbors. Initially, I approached this by using an LSTM as the sequence encoder instead of bag-of-words. After trying different approaches for obtaining the sequence ecoding from the LSTM, I concluded that LSTMs were too slow to justify the slight increase in accuracy. After that, I started an encoder that was part of a network released during my internship called the <a href="https://arxiv.org/pdf/1706.03762.pdf" target="_blank">Transformer network</a> that used multi-headed self-attention to allow the model to look at all inputs while not compromising too much on speed. Through this approach, I was able to improve our main offline metric of next message prediction by 8% and pushed the team in a very promising approach to the problem we are trying to solve.<br><br>
+        I was given a lot of freedom in the direction that I wanted my research to go in. Along with a full-time employee, I was one of the two main people leading the initiative with the Transformer network. With this, we had to fully learn the network and how to integrate it into our existing model. Through this process, I pushed two big code refactors to allow for easier integration and flexibility in choosing sequence encoders.
+        <hr>
+        <center class="md-tags">2017, Work, Research, Python, Natural Language Processing</center>
         <!-- <center class="md-buttons">
         </center> -->
         <center class="md-close"><a>Close</a></center>
@@ -166,6 +226,36 @@
     </div>
   </div>
 
+  <div class="md-modal" id="randopt-modal">
+    <div class="md-content">
+      <h3>Randomized Optimization</h3>
+      <div>
+        Analyzed randomized hill climbing, simmulated annealing, and genetic algorithms in the context of machine learning.
+        <hr>
+        <center class="md-tags">2016, Class, Machine Learning</center>
+        <center class="md-buttons">
+          <a href="files/randomized-paper.pdf" target="_blank">Paper</a>
+        </center>
+        <center class="md-close"><a>Close</a></center>
+      </div>
+    </div>
+  </div>
+
+  <div class="md-modal" id="rl-modal">
+    <div class="md-content">
+      <h3>Reinforcement Learning</h3>
+      <div>
+        Analyzed value iteration, policy iteration, and Q learning in the context of machine learning.
+        <hr>
+        <center class="md-tags">2016, Class, Machine Learning</center>
+        <center class="md-buttons">
+          <a href="files/reinforcement-paper.pdf" target="_blank">Paper</a>
+        </center>
+        <center class="md-close"><a>Close</a></center>
+      </div>
+    </div>
+  </div>
+
   <div class="md-modal" id="scheherezade-modal">
     <div class="md-content">
       <h3>Scheherezade 2.0</h3>
@@ -173,7 +263,7 @@
         Working on using deep reinforcement learning for story generation with Professor <a href="mailto:riedl@cc.gatech.edu">Mark Riedl</a>. We're working with TensorFlow to generate creative, unique stories that are coherent. Our model can then be manifested in a chatbot that can respond to an arbitrary input in any style. For example, if we are using a model based on the works of Shakespeare, we would have a chatbot that would respond to prompts like Shakespeare would. We are publication ready with our initial results and successes and hope to publish in January 2018. The paper that we have published already is referring to the overall system that our deep reinforcement learning model would fit into.<br><br>
         I have been part of this project since it first started and have worked mainly on the deep learning portion of our deep reinforcement learning model. I am starting to transition to working on the reinforcement learning part as that is what we think is the key to success.
         <hr>
-        <center class="md-tags">2016-2017, Research, Python, Algorithms, Machine Learning, Natural Language Processing</center>
+        <center class="md-tags">2016-2017, Research, Python, Natural Language Processing</center>
         <center class="md-buttons">
           <a href="files/scheherezade-paper.pdf" target="_blank">Paper</a>
           <a href="files/scheherezade-poster.pdf" target="_blank">Poster</a>
@@ -199,6 +289,36 @@
     </div>
   </div>
 
+  <div class="md-modal" id="perceptron-modal">
+    <div class="md-content">
+      <h3>Structured Perceptron</h3>
+      <div>
+        Implemented sequence labeling algorithm that is near state-of-the-art using structured perceptrons.
+        <hr>
+        <center class="md-tags">2017, Class, Python, Artificial Intelligence, Natural Language Processing</center>
+        <center class="md-buttons">
+          <a href="https://github.com/ndass6/Structured-Perceptron" target="_blank">GitHub</a>
+        </center>
+        <center class="md-close"><a>Close</a></center>
+      </div>
+    </div>
+  </div>
+
+  <div class="md-modal" id="supervised-modal">
+    <div class="md-content">
+      <h3>Supervised Learning</h3>
+      <div>
+        Analyzed neural networks, k-nearest neighbors, boosting, SVM, and decision trees in the context of machine learning.
+        <hr>
+        <center class="md-tags">2016, Class, Machine Learning</center>
+        <center class="md-buttons">
+          <a href="files/supervised-paper.pdf" target="_blank">Paper</a>
+        </center>
+        <center class="md-close"><a>Close</a></center>
+      </div>
+    </div>
+  </div>
+
   <div class="md-modal" id="tsm-modal">
     <div class="md-content">
       <h3>Target Strength Modeling Renderer Modernization</h3>
@@ -214,283 +334,13 @@
     </div>
   </div>
 
-  <div class="md-modal" id="mule-modal">
-    <div class="md-content">
-      <h3>Atari's M.U.L.E.</h3>
-      <div>
-        Group project where we learned how to work in an Agile environment. I worked on the frontend and developing the initial MVC framework and then transitioned to working on the full stack.
-        <hr>
-        <center class="md-tags">2015, Class, Java</center>
-        <center class="md-buttons">
-          <a href="https://github.com/kurtcarpenter/mule" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="bayesnet-modal">
-    <div class="md-content">
-      <h3>Bayesian Network</h3>
-      <div>
-        Implemented algorithms for exact inference observation, exact inference with time lapse, exact inference full test, approximate inference observation, and approximate inference with time elapse for Bayesian networks. Implemented joint particle filter observation and joint particle filter with time elapse for dynamic Bayesian networks.
-        <hr>
-        <center class="md-tags">2015, Class, Python, Artificial Intelligence</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/Bayesian-Networks" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="bsearch-modal">
-    <div class="md-content">
-      <h3>Binary Search in Assembly</h3>
-      <div>
-        Implemented a recursive version of binary search in LC3 Assembly.
-        <hr>
-        <center class="md-tags">2015, Class, LC3 Assembly, Algorithms</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/LC3-Assembly-Binary-Search" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="bst-c-modal">
-    <div class="md-content">
-      <h3>Binary Search Tree in C</h3>
-      <div>
-        Implemented a Binary Search Tree in C.
-        <hr>
-        <center class="md-tags">2015, Class, C, Data Structures</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/C-BST" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="bst-java-modal">
-    <div class="md-content">
-      <h3>Binary Search Tree in Java</h3>
-      <div>
-        Implemented a Binary Search Tree in Java.
-        <hr>
-        <center class="md-tags">2015, Class, Java, Data Structures</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/Java-BST" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="brick-modal">
-    <div class="md-content">
-      <h3>Brick Breaker</h3>
-      <div>
-        Brick Breaker for a GBA emulator. After using "make vba", you can start playing the game by hitting the start button (Enter). To play the game, use the arrow keys to move your paddle. You get to the next level by hitting all of the bricks with the ball. Upon finishing all of the levels, you can restart the game by hitting the start button (Enter) or you can restart the game at any time by hitting the select button (Backspace). There are animations for finishing a level, losing a life, and winning the game.
-        <hr>
-        <center class="md-tags">2015, Class, C</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/Brick-Breaker" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="constraint-modal">
-    <div class="md-content">
-      <h3>Constraint Satisfaction</h3>
-      <div>
-        Implemented several constraint satisfaction algorithms. Contains Recursive Backtracking, Variable Selection, Value Ordering, Forward Checking, Maintaining Arc Consistency, Preprocessing (AC3), and nQueens where n is 4.
-        <hr>
-        <center class="md-tags">2015, Class, Python, Artificial Intelligence</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/constraint-satisfaction" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="coref-modal">
-    <div class="md-content">
-      <h3>Coreference Resolution</h3>
-      <div>
-        Implemented rule-based and machine learning coreference resolution.
-        <hr>
-        <center class="md-tags">2017, Class, Python, Algorithms, Machine Learning, Natural Language Processing</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/Coreference-Resolution" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="dtdp-modal">
-    <div class="md-content">
-      <h3>Deep Transition Dependency Parser</h3>
-      <div>
-        Implemented deep transition dependency parser in PyTorch.
-        <hr>
-        <center class="md-tags">2017, Class, Python, Algorithms, Machine Learning, Natural Language Processing</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/Deep-Transition-Dependency-Parser" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="galaga-modal">
-    <div class="md-content">
-      <h3>Galaga</h3>
-      <div>
-        Galaga for a GBA emulator. After using "make vba", you can start playing the game by hitting the start button (Enter). To play the game, use the arrow keys and press A (Z) to fire a laser. You get to the next level by shooting all of the enemies while you lose a life if you collide with an enemy. Upon finishing all of the levels, you can restart the game by hitting the start button (Enter) or you can restart the game at any time by hitting the select button (Backspace).
-        <hr>
-        <center class="md-tags">2015, Class, C</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/Galaga" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="graph-modal">
-    <div class="md-content">
-      <h3>Graph Algorithms</h3>
-      <div>
-        Implemented Dijkstra, Floyd-Warshall, and topological sort.
-        <hr>
-        <center class="md-tags">2015, Class, Java, Algorithms</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/Graph-Algorithms" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="malloc-modal">
-    <div class="md-content">
-      <h3>malloc</h3>
-      <div>
-        Implemented stdlib malloc according to address order and size order.
-        <hr>
-        <center class="md-tags">2015, Class, C, Algorithms</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/malloc" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="neuralnet-modal">
-    <div class="md-content">
-      <h3>Neural Network</h3>
-      <div>
-        Implemented methods for feed forward, weight updating, back propagation learning, and back propagation learning loop. Implemented methods to analyze learning with restarts, varying the hidden layer, learning XOR, and learning a poker hand data set from the UCI Machine Learning Repository.
-        <hr>
-        <center class="md-tags">2015, Class, Python, Artificial Intelligence</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/Neural-Network" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="randopt-modal">
-    <div class="md-content">
-      <h3>Randomized Optimization</h3>
-      <div>
-        Analyzed randomized hill climbing, simmulated annealing, and genetic algorithms in the context of machine learning.
-        <hr>
-        <center class="md-tags">2016, Class, Algorithms, Machine Learning</center>
-        <center class="md-buttons">
-          <a href="files/randomized-paper.pdf" target="_blank">Paper</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="rl-modal">
-    <div class="md-content">
-      <h3>Reinforcement Learning</h3>
-      <div>
-        Analyzed value iteration, policy iteration, and Q learning in the context of machine learning.
-        <hr>
-        <center class="md-tags">2016, Class, Algorithms, Machine Learning</center>
-        <center class="md-buttons">
-          <a href="files/reinforcement-paper.pdf" target="_blank">Paper</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="search-modal">
-    <div class="md-content">
-      <h3>Search Algorithms</h3>
-      <div>
-        Implemented depth-first search (DFS), breadth-first search (BFS), uniform-cost search (UCS), and A*. Using Pacman as the world, implemented heuristics for visiting all four corners, eating all the food on the map, and finding a path to the closest food.
-        <hr>
-        <center class="md-tags">2015, Class, Python, Artificial Intelligence, Algorithms</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/search-algorithms" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="perceptron-modal">
-    <div class="md-content">
-      <h3>Structured Perceptron</h3>
-      <div>
-        Implemented sequence labeling algorithm that is near state-of-the-art using structured perceptrons.
-        <hr>
-        <center class="md-tags">2017, Class, Python, Algorithms, Artificial Intelligence, Natural Language Processing</center>
-        <center class="md-buttons">
-          <a href="https://github.com/ndass6/Structured-Perceptron" target="_blank">GitHub</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
-  <div class="md-modal" id="supervised-modal">
-    <div class="md-content">
-      <h3>Supervised Learning</h3>
-      <div>
-        Analyzed neural networks, k-nearest neighbors, boosting, SVM, and decision trees in the context of machine learning.
-        <hr>
-        <center class="md-tags">2016, Class, Algorithms, Machine Learning</center>
-        <center class="md-buttons">
-          <a href="files/supervised-paper.pdf" target="_blank">Paper</a>
-        </center>
-        <center class="md-close"><a>Close</a></center>
-      </div>
-    </div>
-  </div>
-
   <div class="md-modal" id="text-modal">
     <div class="md-content">
       <h3>Text Classification</h3>
       <div>
         Implemented a system for automatically classifying reddit comments by subreddit.
         <hr>
-        <center class="md-tags">2017, Class, Python, Natural Language Processing, Algorithms</center>
+        <center class="md-tags">2017, Class, Python, Natural Language Processing</center>
         <center class="md-buttons">
           <a href="https://github.com/ndass6/Text-Classification" target="_blank">GitHub</a>
         </center>
@@ -505,7 +355,7 @@
       <div>
         Analyzed the combination of clustering (expectation maximization and k-means) and dimensionality reduction (principle component analysis, independent component analysis, randomized projections, and information gain) in the context of machine learning.
         <hr>
-        <center class="md-tags">2016, Class, Algorithms, Machine Learning</center>
+        <center class="md-tags">2016, Class, Machine Learning</center>
         <center class="md-buttons">
           <a href="files/unsupervised-paper.pdf" target="_blank">Paper</a>
         </center>
@@ -532,6 +382,8 @@
       <li><a href="#activities" class="page-scroll"><span>Activities</span></a></li>
       <li><a href="#volunteer" class="page-scroll"><span>Volunteering</span></a></li>
       <li><a href="#contact" class="page-scroll"><span>Contact Me</span></a></li>
+      <!-- TODO: add resume button -->
+      <!-- <li><a href="https://drive.google.com/open?id=0B8vQ4fKiWdP5S1lhb2ZJLWZteHM"><span>Resume</span></a></li> -->
     </ul>
  
     <span aria-hidden="true" class="stretchy-nav-bg"></span>
@@ -841,6 +693,15 @@
           <div class="row" data-aos="zoom-in-up">
             <div class="col-md-4">
               <div class="center grow">
+                <i class="fa fa-edit icon-md icon-color9"></i>
+                <h3>Editing Airbnb descriptions to increase occupancy rate</h3>
+                <h5>Stanford Research Assistant</h5>
+                <h5>October 2018 - Present</h5>
+                <p>I am a research assistant under Stanford Professor <a href="mailto:jurafsky@stanford.edu">Dan Jurafsky</a>. The goal of this project is to use text attribute transfer to modify existing Airbnb listing descriptions to increase occupancy rate.</p>
+              </div>
+            </div><!--/.col-md-4-->
+            <div class="col-md-4">
+              <div class="center grow">
                 <i class="fa fa-comments-o icon-md icon-color3"></i>
                 <h3>Head-Mounted Display: Bystander Perception</h3>
                 <h5>Georgia Tech Research Assistant</h5>
@@ -868,9 +729,7 @@
                 <strong><p><a href="files/augmented-coding-paper.pdf" target="_blank">Chinese CHI 2018 Paper</a>, <a href="files/augmented-coding-poster.pdf" target="_blank">Chinese CHI 2018 Poster</a></p></strong>
               </div>
             </div><!--/.col-md-4-->
-          </div><!--/.row-->
-          <div class="row" data-aos="zoom-in-up">
-            <div class="col-md-4 col-md-offset-2">
+            <div class="col-md-4">
               <div class="center grow">
                 <i class="fa fa-commenting icon-md icon-color2"></i>
                 <h3>Scheherazade 2.0</h3>
@@ -920,8 +779,9 @@
                     <strong>Major:</strong> Computer Science<br>
                     <strong>Concentration:</strong> Artificial Intelligence<br>
                     <strong>Expected Graduation:</strong> August 2019<br>
-                    <!-- <strong>GPA:</strong> 3.86/4.0<br><br> -->
-                    <strong>Current CS courses:</strong> Artificial Intelligence, Machine Learning, Deep Learning
+                    <strong>GPA:</strong> 4.0/4.0<br><br>
+                    <strong>Current CS courses:</strong> Natural Language Processing, Operating Systems, Cryptography
+                    <strong>Completed CS courses:</strong> Artificial Intelligence, Machine Learning, Deep Learning
                   </h4>
                 </div>
               </div>
@@ -1005,53 +865,49 @@
             <li><a class="btn btn-primary" data-filter=".python">Python</a></li>
             <li><a class="btn btn-primary" data-filter=".unity">C#/Unity</a></li>
             <li><a class="btn btn-primary" data-filter=".c">C</a></li>
-            <li><a class="btn btn-primary" data-filter=".asm">LC3 Assembly</a></li>
           </ul>
           <ul class="project-filter area-filter">
             <li>Area: </li>
             <li><a class="btn btn-primary active" data-filter=".area">Any</a></li>
-            <li><a class="btn btn-primary" data-filter=".algo">Algorithms</a></li>
             <li><a class="btn btn-primary" data-filter=".ai">Artificial Intelligence</a></li>
             <li><a class="btn btn-primary" data-filter=".ar">Augmented Reality</a></li>
-            <li><a class="btn btn-primary" data-filter=".struct">Data Structures</a></li>
             <li><a class="btn btn-primary" data-filter=".ml">Machine Learning</a></li>
             <li><a class="btn btn-primary" data-filter=".nlp">Natural Language Processing</a></li>
             <li><a class="btn btn-primary" data-filter=".vr">Virtual Reality</a></li>
           </ul>
           <ul class="project-items">
 
-            <li class="project-item year type lang area 2014 2015 2016 research unity hci vr col-xs-12 col-sm-6 col-md-4">
+            <li class="project-item year type lang area 2016 personal unity ar hci col-xs-12 col-sm-6 col-md-4">
               <figure>
-                <a class="md-trigger" data-modal="naturalmotion-modal" target=""><img src="images/projects/naturalmotion.png"></a>
+                <a class="md-trigger" data-modal="architect-modal" target=""><img src="images/projects/architect.png"></a>
                 <figcaption>
                   <h5>
-                    2014-2016, Research, C#/Unity, Human-Computer Interaction, Virtual Reality
+                    2016, Personal, C#/Unity, Augmented Reality, Human Computer Interaction
                   </h5>
                 </figcaption>
               </figure>
-              <p>NaturalMotion</p>
-              <h5>
-                <a href="files/naturalmotion-paper.pdf" target="_blank">Paper</a>
-                <a href="files/naturalmotion-poster.pdf" target="_blank">Poster</a>
-                <a href="files/naturalmotion-video.mp4" target="_blank">Video</a>
-                <a class="md-trigger" data-modal="naturalmotion-modal" target="">Details</a>
+              <p>ARchitect</p>
+              <h5 class = "project-buttons">
+                <a href="https://github.com/ndass6/ARchitect" target="_blank">GitHub</a>
+                <a href="https://devpost.com/software/holohack" target="_blank">DevPost</a>
+                <a href="files/architect-video.mp4" target="_blank">Video</a>
+                <a class="md-trigger" data-modal="architect-modal" target="">Details</a>
               </h5>
             </li>
 
-            <li class="project-item year type lang area 2016 2017 research ml nlp python algo col-xs-12 col-sm-6 col-md-4">
+            <li class="project-item year type lang area 2016 2017 research unity ar hci col-xs-12 col-sm-6 col-md-4">
               <figure>
-                <a class="md-trigger" data-modal="scheherezade-modal" target=""><img src="images/projects/nlp.jpg"></a>
+                <a class="md-trigger" data-modal="art2-modal" target=""><img src="images/projects/art2.jpg"></a>
                 <figcaption>
                   <h5>
-                    2016-2017, Research, Python, Algorithms, Machine Learning, Natural Language Processing
+                    2016-2017, Research, C#/Unity, Augmented Reality, Human-Computer Interaction
                   </h5>
                 </figcaption>
               </figure>
-              <p>Scheherezade 2.0</p>
+              <p>ART<sup>2</sup></p>
               <h5 class = "project-buttons">
-                <a href="files/scheherezade-paper.pdf" target="_blank">Paper</a>
-                <a href="files/scheherezade-poster.pdf" target="_blank">Poster</a>
-                <a class="md-trigger" data-modal="scheherezade-modal" target="">Details</a>
+                <a href="files/art2-video.mp4" target="_blank">Video</a>
+                <a class="md-trigger" data-modal="art2-modal" target="">Details</a>
               </h5>
             </li>
 
@@ -1072,6 +928,70 @@
               </h5>
             </li>
 
+            <li class="project-item year type lang area 2015 class c col-xs-12 col-sm-6 col-md-4">
+              <figure>
+                <a class="md-trigger" data-modal="brick-modal" target=""><img src="images/projects/brick.png"></a>
+                <figcaption>
+                  <h5>
+                    2015, Class, C
+                  </h5>
+                </figcaption>
+              </figure>
+              <p>Brick Breaker</p>
+              <h5 class = "project-buttons">
+                <a href="https://github.com/ndass6/Brick-Breaker" target="_blank">GitHub</a>
+                <a class="md-trigger" data-modal="brick-modal" target="">Details</a>
+              </h5>
+            </li>
+
+            <li class="project-item year type lang area 2017 class python nlp col-xs-12 col-sm-6 col-md-4">
+              <figure>
+                <a class="md-trigger" data-modal="coref-modal" target=""><img src="images/projects/nlp.jpg"></a>
+                <figcaption>
+                  <h5>
+                    2017, Class, Python, Natural Language Processing
+                  </h5>
+                </figcaption>
+              </figure>
+              <p>Coreference Resolution</p>
+              <h5 class = "project-buttons">
+                <a href="https://github.com/ndass6/Coreference-Resolution" target="_blank">GitHub</a>
+                <a class="md-trigger" data-modal="coref-modal" target="">Details</a>
+              </h5>
+            </li>
+
+            <li class="project-item year type lang area 2017 class python nlp col-xs-12 col-sm-6 col-md-4">
+              <figure>
+                <a class="md-trigger" data-modal="dtdp-modal" target=""><img src="images/projects/nlp.jpg"></a>
+                <figcaption>
+                  <h5>
+                    2017, Class, Python, Natural Language Processing
+                  </h5>
+                </figcaption>
+              </figure>
+              <p>Deep Transition Dependency Parser</p>
+              <h5 class = "project-buttons">
+                <a href="https://github.com/ndass6/Deep-Transition-Dependency-Parser" target="_blank">GitHub</a>
+                <a class="md-trigger" data-modal="dtdp-modal" target="">Details</a>
+              </h5>
+            </li>
+
+            <li class="project-item year type lang area 2015 class c col-xs-12 col-sm-6 col-md-4">
+              <figure>
+                <a class="md-trigger" data-modal="galaga-modal" target=""><img src="images/projects/galaga.png"></a>
+                <figcaption>
+                  <h5>
+                    2015, Class, C
+                  </h5>
+                </figcaption>
+              </figure>
+              <p>Galaga</p>
+              <h5 class = "project-buttons">
+                <a href="https://github.com/ndass6/Galaga" target="_blank">GitHub</a>
+                <a class="md-trigger" data-modal="galaga-modal" target="">Details</a>
+              </h5>
+            </li>
+
             <li class="project-item year type lang area 2017 research ar hci col-xs-12 col-sm-6 col-md-4">
               <figure>
                 <a class="md-trigger" data-modal="hmd-modal" target=""><img src="images/projects/hmd.png"></a>
@@ -1087,22 +1007,6 @@
               </h5>
             </li>
 
-            <li class="project-item year type lang area 2016 2017 research unity ar hci col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="art2-modal" target=""><img src="images/projects/art2.jpg"></a>
-                <figcaption>
-                  <h5>
-                    2016-2017, Research, C#/Unity, Augmented Reality, Human-Computer Interaction
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>ART<sup>2</sup></p>
-              <h5 class = "project-buttons">
-                <a href="files/art2-video.mp4" target="_blank">Video</a>
-                <a class="md-trigger" data-modal="art2-modal" target="">Details</a>
-              </h5>
-            </li>
-
             <li class="project-item year type lang area 2017 work research python nlp col-xs-12 col-sm-6 col-md-4">
               <figure>
                 <a class="md-trigger" data-modal="improvingtext-modal" target=""><img src="images/projects/nlp.jpg"></a>
@@ -1115,21 +1019,6 @@
               <p>Improving Text Encoders</p>
               <h5 class = "project-buttons">
                 <a class="md-trigger" data-modal="improvingtext-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2016 work unity hci vr col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="longtermtyping-modal" target=""><img src="images/projects/longtermtyping.jpg"></a>
-                <figcaption>
-                  <h5>
-                    2016, Work, C#/Unity, Human-Computer Interaction, Virtual Reality
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Long-term typing in VR</p>
-              <h5 class = "project-buttons">
-                <a class="md-trigger" data-modal="longtermtyping-modal" target="">Details</a>
               </h5>
             </li>
 
@@ -1151,37 +1040,18 @@
               </h5>
             </li>
 
-            <li class="project-item year type lang area 2017 personal unity ar hci col-xs-12 col-sm-6 col-md-4">
+            <li class="project-item year type lang area 2016 work unity hci vr col-xs-12 col-sm-6 col-md-4">
               <figure>
-                <a class="md-trigger" data-modal="speechgram-modal" target=""><img src="images/projects/speechgram.png"></a>
+                <a class="md-trigger" data-modal="longtermtyping-modal" target=""><img src="images/projects/longtermtyping.jpg"></a>
                 <figcaption>
                   <h5>
-                    2017, Personal, C#/Unity, Augmented Reality, Human-Computer Interaction
+                    2016, Work, C#/Unity, Human-Computer Interaction, Virtual Reality
                   </h5>
                 </figcaption>
               </figure>
-              <p>SpeechGram</p>
+              <p>Long-term typing in VR</p>
               <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/speechgram" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="speechgram-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2016 personal unity ar hci col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="architect-modal" target=""><img src="images/projects/architect.png"></a>
-                <figcaption>
-                  <h5>
-                    2016, Personal, C#/Unity, Augmented Reality, Human Computer Interaction
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>ARchitect</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/ARchitect" target="_blank">GitHub</a>
-                <a href="https://devpost.com/software/holohack" target="_blank">DevPost</a>
-                <a href="files/architect-video.mp4" target="_blank">Video</a>
-                <a class="md-trigger" data-modal="architect-modal" target="">Details</a>
+                <a class="md-trigger" data-modal="longtermtyping-modal" target="">Details</a>
               </h5>
             </li>
 
@@ -1201,6 +1071,121 @@
               </h5>
             </li>
 
+            <li class="project-item year type lang area 2014 2015 2016 research unity hci vr col-xs-12 col-sm-6 col-md-4">
+              <figure>
+                <a class="md-trigger" data-modal="naturalmotion-modal" target=""><img src="images/projects/naturalmotion.png"></a>
+                <figcaption>
+                  <h5>
+                    2014-2016, Research, C#/Unity, Human-Computer Interaction, Virtual Reality
+                  </h5>
+                </figcaption>
+              </figure>
+              <p>NaturalMotion</p>
+              <h5>
+                <a href="files/naturalmotion-paper.pdf" target="_blank">Paper</a>
+                <a href="files/naturalmotion-poster.pdf" target="_blank">Poster</a>
+                <a href="files/naturalmotion-video.mp4" target="_blank">Video</a>
+                <a class="md-trigger" data-modal="naturalmotion-modal" target="">Details</a>
+              </h5>
+            </li>
+
+            <li class="project-item year type lang area 2016 class ml col-xs-12 col-sm-6 col-md-4">
+              <figure>
+                <a class="md-trigger" data-modal="randopt-modal" target=""><img src="images/projects/ml.jpg"></a>
+                <figcaption>
+                  <h5>
+                    2016, Class, Machine Learning
+                  </h5>
+                </figcaption>
+              </figure>
+              <p>Randomized Optimization</p>
+              <h5 class = "project-buttons">
+                <a href="files/randomized-paper.pdf" target="_blank">Paper</a>
+                <a class="md-trigger" data-modal="randopt-modal" target="">Details</a>
+              </h5>
+            </li>
+
+            <li class="project-item year type lang area 2016 class ml col-xs-12 col-sm-6 col-md-4">
+              <figure>
+                <a class="md-trigger" data-modal="rl-modal" target=""><img src="images/projects/ml.jpg"></a>
+                <figcaption>
+                  <h5>
+                    2016, Class, Machine Learning
+                  </h5>
+                </figcaption>
+              </figure>
+              <p>Reinforcement Learning</p>
+              <h5 class = "project-buttons">
+                <a href="files/reinforcement-paper.pdf" target="_blank">Paper</a>
+                <a class="md-trigger" data-modal="rl-modal" target="">Details</a>
+              </h5>
+            </li>
+
+            <li class="project-item year type lang area 2016 2017 research nlp python col-xs-12 col-sm-6 col-md-4">
+              <figure>
+                <a class="md-trigger" data-modal="scheherezade-modal" target=""><img src="images/projects/nlp.jpg"></a>
+                <figcaption>
+                  <h5>
+                    2016-2017, Research, Python, Natural Language Processing
+                  </h5>
+                </figcaption>
+              </figure>
+              <p>Scheherezade 2.0</p>
+              <h5 class = "project-buttons">
+                <a href="files/scheherezade-paper.pdf" target="_blank">Paper</a>
+                <a href="files/scheherezade-poster.pdf" target="_blank">Poster</a>
+                <a class="md-trigger" data-modal="scheherezade-modal" target="">Details</a>
+              </h5>
+            </li>
+
+            <li class="project-item year type lang area 2017 personal unity ar hci col-xs-12 col-sm-6 col-md-4">
+              <figure>
+                <a class="md-trigger" data-modal="speechgram-modal" target=""><img src="images/projects/speechgram.png"></a>
+                <figcaption>
+                  <h5>
+                    2017, Personal, C#/Unity, Augmented Reality, Human-Computer Interaction
+                  </h5>
+                </figcaption>
+              </figure>
+              <p>SpeechGram</p>
+              <h5 class = "project-buttons">
+                <a href="https://github.com/ndass6/speechgram" target="_blank">GitHub</a>
+                <a class="md-trigger" data-modal="speechgram-modal" target="">Details</a>
+              </h5>
+            </li>
+
+            <li class="project-item year type lang area 2017 class python ai nlp col-xs-12 col-sm-6 col-md-4">
+              <figure>
+                <a class="md-trigger" data-modal="perceptron-modal" target=""><img src="images/projects/nlp.jpg"></a>
+                <figcaption>
+                  <h5>
+                    2017, Class, Python, Artificial Intelligence, Natural Language Processing
+                  </h5>
+                </figcaption>
+              </figure>
+              <p>Structured Perceptron</p>
+              <h5 class = "project-buttons">
+                <a href="https://github.com/ndass6/Structured-Perceptron" target="_blank">GitHub</a>
+                <a class="md-trigger" data-modal="perceptron-modal" target="">Details</a>
+              </h5>
+            </li>
+
+            <li class="project-item year type lang area 2016 class ml col-xs-12 col-sm-6 col-md-4">
+              <figure>
+                <a class="md-trigger" data-modal="supervised-modal" target=""><img src="images/projects/ml.jpg"></a>
+                <figcaption>
+                  <h5>
+                    2016, Class, Machine Learning
+                  </h5>
+                </figcaption>
+              </figure>
+              <p>Supervised Learning</p>
+              <h5 class = "project-buttons">
+                <a href="files/supervised-paper.pdf" target="_blank">Paper</a>
+                <a class="md-trigger" data-modal="supervised-modal" target="">Details</a>
+              </h5>
+            </li>
+
             <li class="project-item year type lang area 2015 work java col-xs-12 col-sm-6 col-md-4">
               <figure>
                 <a class="md-trigger" data-modal="tsm-modal" target=""><img src="images/projects/tsm.png"></a>
@@ -1216,108 +1201,12 @@
               </h5>
             </li>
 
-            <li class="project-item year type lang area 2017 class python algo ml nlp col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="coref-modal" target=""><img src="images/projects/nlp.jpg"></a>
-                <figcaption>
-                  <h5>
-                    2017, Class, Python, Algorithms, Machine Learning, Natural Language Processing
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Coreference Resolution</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/Coreference-Resolution" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="coref-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2017 class python algo ml nlp col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="dtdp-modal" target=""><img src="images/projects/nlp.jpg"></a>
-                <figcaption>
-                  <h5>
-                    2017, Class, Python, Algorithms, Machine Learning, Natural Language Processing
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Deep Transition Dependency Parser</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/Deep-Transition-Dependency-Parser" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="dtdp-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2016 class algo ml col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="randopt-modal" target=""><img src="images/projects/ml.jpg"></a>
-                <figcaption>
-                  <h5>
-                    2016, Class, Algorithms, Machine Learning
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Randomized Optimization</p>
-              <h5 class = "project-buttons">
-                <a href="files/randomized-paper.pdf" target="_blank">Paper</a>
-                <a class="md-trigger" data-modal="randopt-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2016 class algo ml col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="rl-modal" target=""><img src="images/projects/ml.jpg"></a>
-                <figcaption>
-                  <h5>
-                    2016, Class, Algorithms, Machine Learning
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Reinforcement Learning</p>
-              <h5 class = "project-buttons">
-                <a href="files/reinforcement-paper.pdf" target="_blank">Paper</a>
-                <a class="md-trigger" data-modal="rl-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2017 class python ai nlp algo col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="perceptron-modal" target=""><img src="images/projects/nlp.jpg"></a>
-                <figcaption>
-                  <h5>
-                    2017, Class, Python, Algorithms, Artificial Intelligence, Natural Language Processing
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Structured Perceptron</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/Structured-Perceptron" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="perceptron-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2016 class algo ml col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="supervised-modal" target=""><img src="images/projects/ml.jpg"></a>
-                <figcaption>
-                  <h5>
-                    2016, Class, Algorithms, Machine Learning
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Supervised Learning</p>
-              <h5 class = "project-buttons">
-                <a href="files/supervised-paper.pdf" target="_blank">Paper</a>
-                <a class="md-trigger" data-modal="supervised-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2017 class python nlp algo col-xs-12 col-sm-6 col-md-4">
+            <li class="project-item year type lang area 2017 class python nlp col-xs-12 col-sm-6 col-md-4">
               <figure>
                 <a class="md-trigger" data-modal="text-modal" target=""><img src="images/projects/nlp.jpg"></a>
                 <figcaption>
                   <h5>
-                    2017, Class, Python, Natural Language Processing, Algorithms
+                    2017, Class, Python, Natural Language Processing
                   </h5>
                 </figcaption>
               </figure>
@@ -1328,12 +1217,12 @@
               </h5>
             </li>
 
-            <li class="project-item year type lang area 2016 class algo ml col-xs-12 col-sm-6 col-md-4">
+            <li class="project-item year type lang area 2016 class ml col-xs-12 col-sm-6 col-md-4">
               <figure>
                 <a class="md-trigger" data-modal="unsupervised-modal" target=""><img src="images/projects/ml.jpg"></a>
                 <figcaption>
                   <h5>
-                    2016, Class, Algorithms, Machine Learning
+                    2016, Class, Machine Learning
                   </h5>
                 </figcaption>
               </figure>
@@ -1341,198 +1230,6 @@
               <h5 class = "project-buttons">
                 <a href="files/unsupervised-paper.pdf" target="_blank">Paper</a>
                 <a class="md-trigger" data-modal="unsupervised-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2015 class c col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="galaga-modal" target=""><img src="images/projects/galaga.png"></a>
-                <figcaption>
-                  <h5>
-                    2015, Class, C
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Galaga</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/Galaga" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="galaga-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2015 class c col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="brick-modal" target=""><img src="images/projects/brick.png"></a>
-                <figcaption>
-                  <h5>
-                    2015, Class, C
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Brick Breaker</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/Brick-Breaker" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="brick-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2015 class python ai col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="bayesnet-modal" target=""><img src="images/projects/bayesnet.png"></a>
-                <figcaption>
-                  <h5>
-                    2015, Class, Python, Artificial Intelligence
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Bayesian Network</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/Bayesian-Networks" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="bayesnet-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2015 class python ai algo col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="constraint-modal" target=""><img src="images/projects/constraint.png"></a>
-                <figcaption>
-                  <h5>
-                    2015, Class, Python, Artificial Intelligence
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Constraint Satisfaction</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/constraint-satisfaction" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="constraint-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2015 class python ai algo col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="search-modal" target=""><img src="images/projects/search.png"></a>
-                <figcaption>
-                  <h5>
-                    2015, Class, Python, Artificial Intelligence, Algorithms
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Search Algorithms</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/search-algorithms" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="search-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2015 class java algo col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="graph-modal" target=""><img src="images/projects/graph.png"></a>
-                <figcaption>
-                  <h5>
-                    2015, Class, Java, Algorithms
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Graph Algorithms</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/Graph-Algorithms" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="graph-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area class 2015 python ai col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="neuralnet-modal" target=""><img src="images/projects/neuralnet.png"></a>
-                <figcaption>
-                  <h5>
-                    2015, Class, Python, Artificial Intelligence
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Neural Network</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/Neural-Network" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="neuralnet-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2015 class c algo col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="malloc-modal" target=""><img src="images/projects/malloc.png"></a>
-                <figcaption>
-                  <h5>
-                    2015, Class, C, Algorithms
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>malloc</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/malloc" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="malloc-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2015 class asm algo col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="bsearch-modal" target=""><img src="images/projects/bsearch.jpg"></a>
-                <figcaption>
-                  <h5>
-                    2015, Class, LC3 Assembly, Algorithms
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Binary Search in Assembly</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/LC3-Assembly-Binary-Search" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="bsearch-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2015 class c struct col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="bst-c-modal" target=""><img src="images/projects/btree.png"></a>
-                <figcaption>
-                  <h5>
-                    2015, Class, C, Data Structures
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Binary Search Tree in C</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/C-BST" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="bst-c-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2015 class java col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="mule-modal" target=""><img src="images/projects/mule.png"></a>
-                <figcaption>
-                  <h5>
-                    2015, Class, Java
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Atari's M.U.L.E.</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/kurtcarpenter/mule" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="mule-modal" target="">Details</a>
-              </h5>
-            </li>
-
-            <li class="project-item year type lang area 2015 class java struct col-xs-12 col-sm-6 col-md-4">
-              <figure>
-                <a class="md-trigger" data-modal="bst-java-modal" target=""><img src="images/projects/btree.png"></a>
-                <figcaption>
-                  <h5>
-                    2015, Class, Java, Data Structures
-                  </h5>
-                </figcaption>
-              </figure>
-              <p>Binary Search Tree in Java</p>
-              <h5 class = "project-buttons">
-                <a href="https://github.com/ndass6/Java-BST" target="_blank">GitHub</a>
-                <a class="md-trigger" data-modal="bst-java-modal" target="">Details</a>
               </h5>
             </li>
 

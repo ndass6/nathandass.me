@@ -306,6 +306,9 @@ a:focus {
 .cd-stretchy-nav ul li:nth-of-type(10) a::after {
   content: "\f086";
 }
+.cd-stretchy-nav ul li:nth-of-type(11) a::after {
+  content: "\f15c";
+}
 .cd-stretchy-nav ul span {
   /* navigation item labels */
   display: block;
@@ -436,6 +439,12 @@ a:focus {
   -webkit-animation-delay: 0.25s;
   -moz-animation-delay: 0.25s;
   animation-delay: 0.25s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(11) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(11) span {
+  -webkit-animation-delay: 0.275s;
+  -moz-animation-delay: 0.275s;
+  animation-delay: 0.275s;
 }
 
 /* Keyframes */
